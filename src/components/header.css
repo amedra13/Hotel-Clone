@@ -1,0 +1,27 @@
+.Header {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 30px;
+}
+.Header__Logo {
+	object-fit: cover;
+	width: 220px;
+	margin: 20px 0;
+}
+.Header__Tabs {
+	color: black;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.Header__Tabs > .Header__tab {
+	margin: 0 20px;
+	text-align: center;
+}
+.Header__toolbarMargin {
+	margin-bottom: 5.5rem;
+}
+.Header__Book {
+	margin: 0;
+	padding: 0;
+}
