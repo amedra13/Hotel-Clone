@@ -1,0 +1,13 @@
+.Carousel__ImgContainer {
+	height: 70vh;
+	width: 100vw;
+	overflow: hidden;
+}
+
+.Carousel__Img {
+	width: 100%;
+	transform: translateY(-15%);
+}
+.higherImg {
+	transform: translateY(-28%);
+}
