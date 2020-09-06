@@ -6,6 +6,10 @@ import IconButton from '@material-ui/core/IconButton';
 import PhoneIcon from '@material-ui/icons/Phone';
 import MenuIcon from '@material-ui/icons/Menu';
 import logo from '../images/nobuPaloAlto.png';
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
@@ -81,6 +85,25 @@ const Header = () => {
 						<IconButton>
 							<MenuIcon fontSize="large" />
 						</IconButton>
+						<Drawer anchor="right">
+							<List>
+								<ListItem divider>
+									<ListItemText>ROOMS & SUITES</ListItemText>
+								</ListItem>
+								<ListItem divider>
+									<ListItemText>OFFERS</ListItemText>
+								</ListItem>
+								<ListItem divider>
+									<ListItemText>DINING</ListItemText>
+								</ListItem>
+								<ListItem divider>
+									<ListItemText>MEETING & EVENTS</ListItemText>
+								</ListItem>
+								<ListItem divider>
+									<ListItemText>COVID-UPDATES</ListItemText>
+								</ListItem>
+							</List>
+						</Drawer>
 					</div>
 				</Toolbar>
 			</AppBar>
