@@ -70,7 +70,12 @@ const Header = () => {
 			<IconButton onClick={() => setToggleTab(!toggleTab)}>
 				<MenuIcon fontSize="large" />
 			</IconButton>
-			<Drawer anchor="right" open={toggleTab}>
+			<Drawer
+				variant="temporary"
+				anchor="right"
+				open={toggleTab}
+				onBackdropClick={() => setToggleTab(!toggleTab)}
+			>
 				<List>
 					<ListItem divider>
 						<ListItemText>ROOMS & SUITES</ListItemText>
