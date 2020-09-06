@@ -4,9 +4,13 @@ import './description.css';
 const Description = () => {
 	return (
 		<div className="Description">
-			<h6>NOBU HOTEL IN SILICON VALLEY</h6>
-			<h3>DOWNTOWN PALO ALTO</h3>
-			<p>WHERE MODERN JAPANESE DESIGN MEETS WEST COAST LUXURY LIFESTYLE</p>
+			<h6>
+				<i>NOBU HOTEL IN SILICON VALLEY</i>
+			</h6>
+			<h1 className="Description__Title">DOWNTOWN PALO ALTO</h1>
+			<p className="Description__Subtitle">
+				WHERE MODERN JAPANESE DESIGN MEETS WEST COAST LUXURY LIFESTYLE
+			</p>
 			<br />
 			<p>
 				​Our 73-room boutique hotel in the heart of Silicon Valley is undergoing

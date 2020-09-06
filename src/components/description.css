@@ -1,6 +1,12 @@
 .Description {
 	text-align: center;
-	margin: 0 auto;
+	margin: 75px auto;
 	width: 65vw;
-	font-family: 'Gotham Light';
+	font-family: 'Quicksand', sans-serif;
+}
+.Description__Title {
+	font-weight: 700;
+}
+.Description__Subtitle {
+	font-weight: 600;
 }

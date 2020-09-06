@@ -25,6 +25,9 @@ const theme = createMuiTheme({
 
 theme.typography.button = {
 	fontSize: '.7rem',
+	fontFamily: 'Quicksand',
+	fontWeight: '600',
+	fontStyle: 'italic',
 };
 theme.typography.caption = {
 	fontSize: '1rem',
