@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Carousel from './components/Carousel';
 import Description from './components/Description';
 import SlideOffers from './components/SlideOffers';
+import RoomsCarousel from './components/RoomsCarousel';
 
 function App() {
 	return (
@@ -11,6 +12,7 @@ function App() {
 			<Header />
 			<Carousel />
 			<Description />
+			<RoomsCarousel />
 			<SlideOffers />
 		</div>
 	);

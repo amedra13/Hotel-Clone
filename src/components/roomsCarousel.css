@@ -1,0 +1,29 @@
+.Carousel {
+	margin: 75px 0;
+}
+.Carousel__ImgContainer {
+	height: 70vh;
+	width: 100vw;
+	overflow: hidden;
+}
+@media only screen and (max-width: 900px) {
+	.Carousel__ImgContainer {
+		height: 50vh;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.Carousel__ImgContainer {
+		height: 40vh;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.Carousel__ImgContainer {
+		height: 30vh;
+	}
+}
+
+.Carousel__ImgContainer > img {
+	width: 100%;
+	object-fit: cover;
+	transform: translateY(-30%);
+}
