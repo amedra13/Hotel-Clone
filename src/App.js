@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Carousel from './components/Carousel';
 import Description from './components/Description';
+import SlideOffers from './components/SlideOffers';
 
 function App() {
 	return (
@@ -10,6 +11,7 @@ function App() {
 			<Header />
 			<Carousel />
 			<Description />
+			<SlideOffers />
 		</div>
 	);
 }
