@@ -5,14 +5,14 @@ const slidedetails = {
 			'https://storage.googleapis.com/zagat-user/Nobu_SF_breakfastbuns_LeoGong.jpg',
 		description:
 			'Nobu Hotel Palo Alto provides an intimate Nobu Restaurant experience in the heart of Silicon Valley. Indulge in world-renowned signature dishes including Yellowtail Sashimi with Jalapeno and Black Cod with Miso along with locally inspired dishes and signature cocktails crafted exclusively for Palo Alto. Hotel guests are also able to indulge in Nobu’s in-room dining menu.',
-		links: ['View Menu'],
+		links: ['VIEW RESTUARANT', 'BOOK A TABLE'],
 	},
 	offers: {
 		title: 'Offers',
 		source: 'https://i.ytimg.com/vi/H-U58pWXOVk/maxresdefault.jpg',
 		description:
 			'Experience Palo Alto exclusively by Nobu Hotels. Whether it’s a luxurious stay in one of our suites to experiencing our beautiful city of Palo Alto, we assure you your stay will be exceptional.',
-		links: ['Explore Offers'],
+		links: ['EXPLORE OFFERS'],
 	},
 	meetingSpace: {
 		title: 'Meetings & Events',
@@ -20,7 +20,7 @@ const slidedetails = {
 			'https://www.paloaltoonline.com/news/photos/2017/august/9/60249_full.jpg',
 		description:
 			'We invite you to host your next meeting in one of our meeting and event spaces.  Our meeting rooms accommodate a variety of events from a boardroom-style conference to a sunset reception overlooking the Northern Californian scenery.',
-		links: ['See our venues'],
+		links: ['RFP', 'SEE OUR VENUES'],
 	},
 	introDining: {
 		title: 'NOBU PALO ALTO',
@@ -28,7 +28,7 @@ const slidedetails = {
 			'https://media.bizj.us/view/img/10530012/screen-shot-2017-07-07-at-24539-pm*1200xx2526-1421-0-6.png',
 		description:
 			'Nobu Palo Alto, located street level, offers Chef Nobu Matsuhisa’s new-style Japanese cuisine with hints of South American influences. Guests may decide to select an omakase dining experience where the chefs curate a special menu for the occasion or they may decide to enjoy some of the favorite dishes such as Black Cod Miso or Rock Shrimp Tempura. *\n Hours of Operation: Carry-Out Breakfast: 7:00 am – 11:00 am | Lunch: (Sat & Sun only) 12:00pm-2:00pm | Dinner: 5:00 pm – 9:00 pm.',
-		links: ['BOOK TABLE'],
+		links: ['VIEW MENUS', 'BOOK TABLE'],
 	},
 	inRoomDining: {
 		title: 'IN ROOM DINING',
@@ -50,7 +50,7 @@ const slidedetails = {
 		source: 'https://pbs.twimg.com/media/Eb-TxmaWoAAt1lj.jpg',
 		description:
 			'Bring the complete Nobu experience to your favorite venue, or add just a touch of Nobu with our many off-premise event concepts and menus. Our dedicated team of professionals are available to provide on-site management of corporate and bridal events, birthdays, bar and bat mitzvahs and other social celebrations. Allow us to bring a taste of Nobu into the comfort of your home, office or private venue. Designed for twelve guests, this Hand Roll Box (pictured) is loaded with all the sushi-making essentials; the Hand Roll Box offers a new, fashionable way of entertaining guests. Available for pick-up at Nobu Palo Alto, the Hand Roll Box is equipped with different premium ingredients and basic tools for preparation and provides you with everything you need to become your own master sushi chef. Simply prepare and enjoy! Three-day advanced notice is required.',
-		links: ['RFP'],
+		links: ['VIEW MENU', 'RFP'],
 	},
 	cancellation: {
 		title: 'FREE CANCELLATION',
@@ -86,7 +86,7 @@ const slidedetails = {
 		source: 'https://s32646.pcdn.co/wp-content/uploads/2020/03/Cycling.jpg',
 		description:
 			'Cycling Nobu Style in partnership with Palo Alto Bicycles sets the stage for picturesque rides that takes in the giant redwoods and the Bay Area coastline in a single ride using our Wahoo GPS devices pre-programmed with cycling routes from 18 up to 100 miles. Coupled with a newly renovated premium guest room, exclusive Nobu branded jersey and bib shorts, breakfast, and amenity designed for cyclists we’ve thought of all the details so you can focus on the ride.',
-		links: ['RESERVE NOW'],
+		links: ['RESERVE NOW', 'LEARN MORE'],
 	},
 	driveToUs: {
 		title: 'DRIVE TO US',
@@ -130,7 +130,7 @@ const slidedetails = {
 			'https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-15/fr/e15/s1080x1080/118229897_1518693928338127_9039036474271627021_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=107&_nc_ohc=2EeXgngDdDoAX-Y9JbY&oh=985596000f25406779ab4f5a2787bdc5&oe=5F81E1B1',
 		description:
 			'Switch up your home office with a change of scenery at your favorite Nobu Hotel. It’s time to reset and recharge with a 9 a.m. – 5 p.m. day pass to luxury in a newly renovated guest room, a decadent Nobu Bento Box lunch and access to all business needs, printing service and fully stocked Nespresso and Ikaati tea and a Signature Bottled Cocktail to enjoy at home. Guest rooms feature Alexa technology with touch free commands to control lighting and window shade, premium sound system and Smansung smart TVs with Roomcast.',
-		links: ['RESERVE NOW'],
+		links: ['RESERVE NOW', 'LEARN MORE'],
 	},
 	stayLonger: {
 		title: 'STAY LONGER WITH NOBU',
