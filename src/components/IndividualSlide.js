@@ -1,6 +1,8 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
@@ -26,6 +28,12 @@ const IndividualSlide = (props) => {
 			<Grid container item xs={12} md={props.slideWidth ? props.slideWidth : 4}>
 				<h1>{props.info.title}</h1>
 				<p>{props.info.description}</p>
+				<List>
+					{props.info.highlights &&
+						props.info.highlights.map((highlight) => {
+							return <ListItem inset>{highlight}</ListItem>;
+						})}
+				</List>
 				{props.info.links.map((link) => {
 					return (
 						<Button
@@ -52,6 +60,12 @@ const IndividualSlide = (props) => {
 				>
 					<h1>{props.info.title}</h1>
 					<p>{props.info.description}</p>
+					<List>
+						{props.info.highlights &&
+							props.info.highlights.map((highlight) => {
+								return <ListItem inset>{highlight}</ListItem>;
+							})}
+					</List>
 					{props.info.links.map((link) => {
 						return (
 							<Button
