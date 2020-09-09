@@ -12,7 +12,6 @@ const useStyles = makeStyles({
 	grid: {
 		width: '98vw',
 		margin: '50px auto',
-		textAlign: 'center',
 		fontSize: '0.8rem',
 		fontFamily: 'QuickSand',
 	},

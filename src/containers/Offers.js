@@ -11,8 +11,7 @@ import './dining.css';
 const useStyles = makeStyles({
 	offersGrid: {
 		width: '98vw',
-		margin: '50px auto',
-		textAlign: 'center',
+		margin: '100px auto',
 		fontSize: '0.8rem',
 		fontFamily: 'QuickSand',
 	},
@@ -33,7 +32,7 @@ const Offers = () => {
 		<div>
 			<Header />
 			<div className="Dining__Entrance">
-				<img src={PaloAlto} alt="Resturant Entrance" />
+				<img className="higher" src={PaloAlto} alt="Resturant Entrance" />
 			</div>
 			<div className={classes.offersHeader}>
 				<h5>
@@ -45,52 +44,66 @@ const Offers = () => {
 				container
 				alignItems="stretch"
 				className={classes.offersGrid}
-				spacing={4}
+				spacing={3}
 			>
 				<IndividualSlide
 					info={slideDetails.cancellation}
 					imgContainerStyle="Dining__ImgContainer"
 					imgStyle="Dining__img"
+					slideWidth={6}
+					reverse
 				/>
 				<IndividualSlide
 					info={slideDetails.suites}
 					imgContainerStyle="Dining__ImgContainer"
 					imgStyle="Dining__img"
+					slideWidth={6}
 				/>
 				<IndividualSlide
 					info={slideDetails.tasteOfNobu}
 					imgContainerStyle="Dining__ImgContainer"
 					imgStyle="Dining__img"
+					slideWidth={6}
+					reverse
 				/>
 				<IndividualSlide
 					info={slideDetails.cycling}
 					imgContainerStyle="Dining__ImgContainer"
 					imgStyle="Dining__img"
+					slideWidth={6}
 				/>
 				<IndividualSlide
 					info={slideDetails.driveToUs}
 					imgContainerStyle="Dining__ImgContainer"
 					imgStyle="Dining__img"
+					slideWidth={6}
+					reverse
 				/>
 				<IndividualSlide
 					info={slideDetails.napa}
 					imgContainerStyle="Dining__ImgContainer"
 					imgStyle="Dining__img"
+					slideWidth={6}
 				/>
 				<IndividualSlide
 					info={slideDetails.localWine}
 					imgContainerStyle="Dining__ImgContainer"
 					imgStyle="Dining__img"
+					slideWidth={6}
+					reverse
 				/>
 				<IndividualSlide
 					info={slideDetails.workWithUs}
 					imgContainerStyle="Dining__ImgContainer"
 					imgStyle="Dining__img"
+					slideWidth={6}
 				/>
 				<IndividualSlide
 					info={slideDetails.stayLonger}
 					imgContainerStyle="Dining__ImgContainer"
 					imgStyle="Dining__img"
+					slideWidth={6}
+					reverse
 				/>
 			</Grid>
 			<Footer />

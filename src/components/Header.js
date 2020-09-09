@@ -56,7 +56,12 @@ const Header = () => {
 			>
 				ROOMS & SUITES
 			</Typography>
-			<Typography className="Header__tab" variant="button">
+			<Typography
+				className="Header__tab"
+				variant="button"
+				component={Link}
+				to="/offers"
+			>
 				OFFERS
 			</Typography>
 			<Typography

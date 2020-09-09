@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 const IndividualSlide = (props) => {
 	let slide = (
 		<>
-			<Grid item xs={12} md={8}>
+			<Grid item xs={12} md={props.slideWidth ? props.slideWidth : 8}>
 				<div className={props.imgContainerStyle}>
 					<img
 						className={props.imgStyle}
@@ -14,7 +14,7 @@ const IndividualSlide = (props) => {
 					/>
 				</div>
 			</Grid>
-			<Grid container item justify="center" xs={12} md={4}>
+			<Grid container item xs={12} md={props.slideWidth ? props.slideWidth : 4}>
 				<h1>{props.info.title}</h1>
 				<p>{props.info.description}</p>
 				<Button variant="outlined" fullWidth>
@@ -26,14 +26,19 @@ const IndividualSlide = (props) => {
 	if (props.reverse) {
 		slide = (
 			<>
-				<Grid container item justify="center" xs={12} md={4}>
+				<Grid
+					container
+					item
+					xs={12}
+					md={props.slideWidth ? props.slideWidth : 4}
+				>
 					<h1>{props.info.title}</h1>
 					<p>{props.info.description}</p>
 					<Button variant="outlined" fullWidth>
 						<h3>{props.info.links[0]}</h3>
 					</Button>
 				</Grid>
-				<Grid item xs={12} md={8}>
+				<Grid item xs={12} md={props.slideWidth ? props.slideWidth : 8}>
 					<div className={props.imgContainerStyle}>
 						<img
 							className={props.imgStyle}
