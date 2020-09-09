@@ -93,13 +93,13 @@ const Header = () => {
 				onBackdropClick={() => setToggleTab(!toggleTab)}
 			>
 				<List>
-					<ListItem divider button>
+					<ListItem divider button component={Link} to="/rooms">
 						<ListItemText>ROOMS & SUITES</ListItemText>
 					</ListItem>
-					<ListItem divider button>
+					<ListItem divider button component={Link} to="/offers">
 						<ListItemText>OFFERS</ListItemText>
 					</ListItem>
-					<ListItem divider button>
+					<ListItem divider button component={Link} to="/dining">
 						<ListItemText>DINING</ListItemText>
 					</ListItem>
 					<ListItem divider button>

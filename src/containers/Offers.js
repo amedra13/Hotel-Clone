@@ -32,7 +32,7 @@ const Offers = () => {
 		<div>
 			<Header />
 			<div className="Dining__Entrance">
-				<img className="higher" src={PaloAlto} alt="Resturant Entrance" />
+				<img src={PaloAlto} alt="Resturant Entrance" />
 			</div>
 			<div className={classes.offersHeader}>
 				<h5>
