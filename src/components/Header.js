@@ -12,6 +12,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { Link } from 'react-router-dom';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 import './header.css';
@@ -47,7 +48,12 @@ const Header = () => {
 
 	const tabs = (
 		<>
-			<Typography className="Header__tab" variant="button">
+			<Typography
+				className="Header__tab"
+				variant="button"
+				component={Link}
+				to="/rooms"
+			>
 				ROOMS & SUITES
 			</Typography>
 			<Typography className="Header__tab" variant="button">
