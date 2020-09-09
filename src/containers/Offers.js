@@ -12,7 +12,7 @@ const useStyles = makeStyles({
 	offersGrid: {
 		width: '98vw',
 		margin: '100px auto',
-		fontSize: '0.8rem',
+		fontSize: '0.9rem',
 		fontFamily: 'QuickSand',
 	},
 	offersHeader: {

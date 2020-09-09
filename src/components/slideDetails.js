@@ -49,7 +49,7 @@ const slidedetails = {
 		title: 'OFF-SITE EVENTS',
 		source: 'https://pbs.twimg.com/media/Eb-TxmaWoAAt1lj.jpg',
 		description:
-			'Bring the complete Nobu experience to your favorite venue, or add just a touch of Nobu with our many off-premise event concepts and menus. Our dedicated team of professionals are available to provide on-site management of corporate and bridal events, birthdays, bar and bat mitzvahs and other social celebrations. Allow us to bring a taste of Nobu into the comfort of your home, office or private venue. Designed for twelve guests, this Hand Roll Box (pictured) is loaded with all the sushi-making essentials; the Hand Roll Box offers a new, fashionable way of entertaining guests. Available for pick-up at Nobu Palo Alto, the Hand Roll Box is equipped with different premium ingredients and basic tools for preparation and provides you with everything you need to become your own master sushi chef. Simply prepare and enjoy! Three-day advanced notice is required.',
+			'Bring the complete Nobu experience to your favorite venue, or add just a touch of Nobu with our many off-premise event concepts and menus. Our dedicated team of professionals are available to provide on-site management of corporate and bridal events, birthdays, bar and bat mitzvahs and other social celebrations. Allow us to bring a taste of Nobu into the comfort of your home, office or private venue. Three-day advanced notice is required.',
 		links: ['VIEW MENU', 'RFP'],
 	},
 	cancellation: {

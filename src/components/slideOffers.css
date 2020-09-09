@@ -3,6 +3,11 @@
 }
 .Grid {
 	font-size: 0.8rem;
+	width: 98vw;
+	margin: 100px auto;
+	padding: 0 20px;
+	font-size: 0.9rem;
+	font-family: 'QuickSand';
 }
 .Offers__ImgContainer {
 	overflow: hidden;

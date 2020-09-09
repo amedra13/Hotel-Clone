@@ -12,7 +12,7 @@ const useStyles = makeStyles({
 	grid: {
 		width: '98vw',
 		margin: '50px auto',
-		fontSize: '0.8rem',
+		fontSize: '0.85rem',
 		fontFamily: 'QuickSand',
 	},
 	diningHeader: {
