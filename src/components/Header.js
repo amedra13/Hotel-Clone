@@ -59,7 +59,12 @@ const Header = () => {
 			<Typography className="Header__tab" variant="button">
 				OFFERS
 			</Typography>
-			<Typography className="Header__tab" variant="button">
+			<Typography
+				className="Header__tab"
+				variant="button"
+				component={Link}
+				to="/dining"
+			>
 				DINING
 			</Typography>
 			<Typography className="Header__tab" variant="button">
@@ -108,7 +113,7 @@ const Header = () => {
 			<ThemeProvider theme={theme}>
 				<AppBar style={{ background: ' rgba(252, 252, 252, 0.589)' }}>
 					<Toolbar className="Header">
-						<Button>
+						<Button component={Link} to="/">
 							<img className="Header__Logo" src={logo} alt="nobu logo" />
 						</Button>
 						<div className="Header__Tabs">

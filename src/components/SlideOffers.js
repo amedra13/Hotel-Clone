@@ -17,6 +17,7 @@ export default function SlideOffers() {
 					info={slideDetails.dining}
 					imgContainerStyle="Offers__ImgContainer"
 					imgStyle="Offers__img"
+					reverse
 				/>
 				<IndividualSlide
 					info={slideDetails.meetingSpace}

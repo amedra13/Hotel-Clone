@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import MainPage from './containers/MainPage';
 import Rooms from './containers/Rooms';
+import Dining from './containers/Dining';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
 					</Route>
 					<Route exact path="/rooms">
 						<Rooms />
+					</Route>
+					<Route exact path="/dining">
+						<Dining />
 					</Route>
 				</Switch>
 			</div>

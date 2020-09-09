@@ -1,0 +1,28 @@
+.Dining__Grid {
+	text-align: center;
+	font-size: 0.8rem;
+	margin: 300px;
+}
+.Dining__ImgContainer {
+	overflow: hidden;
+	border-radius: 3px;
+	height: 350px;
+	width: 100%;
+}
+.Dining__ImgContainer > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 50% 50%;
+}
+.Dining__Entrance {
+	width: 100%;
+	height: 60vh;
+	overflow: hidden;
+}
+
+.Dining__Entrance > img {
+	width: 100%;
+	object-fit: contain;
+	transform: translateY(-33%);
+}
