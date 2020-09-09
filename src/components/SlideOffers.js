@@ -7,7 +7,7 @@ import './slideOffers.css';
 export default function SlideOffers() {
 	return (
 		<div className="App">
-			<Grid container alignItems="stretch" className="Grid" spacing={4}>
+			<Grid container alignItems="flex-start" className="Grid" spacing={4}>
 				<IndividualSlide
 					info={slideDetails.offers}
 					imgContainerStyle="Offers__ImgContainer"

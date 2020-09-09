@@ -145,6 +145,30 @@ const slidedetails = {
 		],
 		links: ['RESERVE NOW'],
 	},
+	meeting: {
+		title: 'MEETINGS & EVENTS',
+		source:
+			'https://images.trvl-media.com/hotels/6000000/5900000/5890400/5890380/18de503c_z.jpg',
+		description:
+			'We invite you to host your next meeting in one of our meeting and event spaces.  Our meeting rooms accommodate a variety of events from a boardroom-style conference to a sunset reception overlooking the Northern Californian scenery. Nobu, the worlds most recognized Japanese restaurant is located on the first floor of the hotel. Event venues Momiji and Sakura are located on the second level and allow your group to have an exclusive Nobu curated dining experience.',
+		links: ['RFP', 'VIRTUAL TOUR'],
+	},
+	venues: {
+		title: 'VENUES',
+		source:
+			'https://s32646.pcdn.co/wp-content/uploads/2019/12/019-NPA-Sakura-1-scaled-e1577988122997.jpg',
+		description:
+			'Intimate and exclusive, all our event spaces feature Nobu and Nobu-inspired catering.  Preview each of our venues using via the capacity chart. ​For more information please contact us directly at events-paloalto@nobuhotels.com.',
+		links: ['RFP', 'VIEW CAPACITY CHART'],
+	},
+	weddings: {
+		title: 'WEDDINGS',
+		source:
+			'https://s32641.pcdn.co/wp-content/uploads/2019/05/rings-highres_1-1024x578.jpg',
+		description:
+			'Allow our dedicated event planners to curate memorable event experiences on your special day with renowned Nobu cuisine, modern design and stunning spaces.',
+		links: ['REQUEST PROPOSAL', 'LEARN MORE'],
+	},
 };
 
 export default slidedetails;

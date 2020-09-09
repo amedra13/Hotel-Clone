@@ -1,21 +1,26 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import DiningEntrance from '../images/DiningPage/nobu_Dining.jpg';
+import MeetingRoom from '../images/Meetings&Events/nobu_meetingRoom.jpg';
 import Grid from '@material-ui/core/Grid';
 import IndividualSlide from '../components/IndividualSlide';
 import slideDetails from '../components/slideDetails';
-import './dining.css';
 import { makeStyles } from '@material-ui/core/styles';
+import './dining.css';
 
 const useStyles = makeStyles({
-	grid: {
-		width: '98vw',
-		margin: '50px auto',
-		fontSize: '0.85rem',
-		fontFamily: 'QuickSand',
+	meetingSpace: {
+		width: '100%',
+		height: 'auto',
+		maxHeight: '60vh',
+		overflow: 'hidden',
 	},
-	diningHeader: {
+	meetingImg: {
+		width: '100%',
+		objectFit: 'cover',
+		transform: 'translateY(-30%)',
+	},
+	meetingHeader: {
 		height: '40vh',
 		display: 'flex',
 		flexDirection: 'column',
@@ -23,18 +28,28 @@ const useStyles = makeStyles({
 		alignItems: 'center',
 		fontFamily: 'QuickSand',
 	},
+	meetingGrid: {
+		width: '98vw',
+		margin: '50px auto',
+		fontSize: '0.85rem',
+		fontFamily: 'QuickSand',
+	},
 });
 
-const Dining = () => {
+const MeetingsAndEvents = () => {
 	const classes = useStyles();
 
 	return (
 		<div>
 			<Header />
-			<div className="Dining__Entrance">
-				<img src={DiningEntrance} alt="Resturant Entrance" />
+			<div className={classes.meetingSpace}>
+				<img
+					className={classes.meetingImg}
+					src={MeetingRoom}
+					alt="Meeting Room"
+				/>
 			</div>
-			<div className={classes.diningHeader}>
+			<div className={classes.meetingHeader}>
 				<h5>
 					<i>NOBU HOTEL IN SILICON VALLEY</i>
 				</h5>
@@ -43,30 +58,24 @@ const Dining = () => {
 			<Grid
 				container
 				alignItems="flex-start"
-				className={classes.grid}
+				className={classes.meetingGrid}
 				spacing={4}
 			>
 				<IndividualSlide
-					info={slideDetails.introDining}
+					info={slideDetails.meeting}
 					imgContainerStyle="Dining__ImgContainer"
 					imgStyle="Dining__img"
 				/>
 				<IndividualSlide
-					info={slideDetails.inRoomDining}
+					info={slideDetails.venues}
 					imgContainerStyle="Dining__ImgContainer"
 					imgStyle="Dining__img"
 					reverse
 				/>
 				<IndividualSlide
-					info={slideDetails.nobuAtHome}
+					info={slideDetails.weddings}
 					imgContainerStyle="Dining__ImgContainer"
 					imgStyle="Dining__img"
-				/>
-				<IndividualSlide
-					info={slideDetails.offSiteEvents}
-					imgContainerStyle="Dining__ImgContainer"
-					imgStyle="Dining__img"
-					reverse
 				/>
 			</Grid>
 			<Footer />
@@ -74,4 +83,4 @@ const Dining = () => {
 	);
 };
 
-export default Dining;
+export default MeetingsAndEvents;

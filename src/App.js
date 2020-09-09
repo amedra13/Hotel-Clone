@@ -4,6 +4,7 @@ import MainPage from './containers/MainPage';
 import Rooms from './containers/Rooms';
 import Dining from './containers/Dining';
 import Offers from './containers/Offers';
+import MeetingsAndEvents from './containers/MeetingsAndEvents';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
 					</Route>
 					<Route exact path="/offers">
 						<Offers />
+					</Route>
+					<Route exact path="/events">
+						<MeetingsAndEvents />
 					</Route>
 				</Switch>
 			</div>

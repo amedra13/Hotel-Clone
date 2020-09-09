@@ -42,7 +42,7 @@ const Offers = () => {
 			</div>
 			<Grid
 				container
-				alignItems="stretch"
+				alignItems="flex-start"
 				className={classes.offersGrid}
 				spacing={3}
 			>

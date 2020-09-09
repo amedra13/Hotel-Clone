@@ -8,6 +8,11 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
 	slideButtons: {
 		height: '3rem',
+		margin: '10px 0',
+	},
+	listItem: {
+		padding: '0',
+		marginLeft: '25px',
 	},
 });
 
@@ -31,7 +36,9 @@ const IndividualSlide = (props) => {
 				<List>
 					{props.info.highlights &&
 						props.info.highlights.map((highlight) => {
-							return <ListItem inset>{highlight}</ListItem>;
+							return (
+								<ListItem className={classes.listItem}>{highlight}</ListItem>
+							);
 						})}
 				</List>
 				{props.info.links.map((link) => {
@@ -63,7 +70,9 @@ const IndividualSlide = (props) => {
 					<List>
 						{props.info.highlights &&
 							props.info.highlights.map((highlight) => {
-								return <ListItem inset>{highlight}</ListItem>;
+								return (
+									<ListItem className={classes.listItem}>{highlight}</ListItem>
+								);
 							})}
 					</List>
 					{props.info.links.map((link) => {

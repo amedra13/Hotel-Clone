@@ -72,7 +72,12 @@ const Header = () => {
 			>
 				DINING
 			</Typography>
-			<Typography className="Header__tab" variant="button">
+			<Typography
+				className="Header__tab"
+				variant="button"
+				component={Link}
+				to="/events"
+			>
 				MEETINGS & EVENTS
 			</Typography>
 			<Typography className="Header__tab" variant="button">
