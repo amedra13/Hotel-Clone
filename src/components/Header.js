@@ -77,19 +77,19 @@ const Header = () => {
 				onBackdropClick={() => setToggleTab(!toggleTab)}
 			>
 				<List>
-					<ListItem divider>
+					<ListItem divider button>
 						<ListItemText>ROOMS & SUITES</ListItemText>
 					</ListItem>
-					<ListItem divider>
+					<ListItem divider button>
 						<ListItemText>OFFERS</ListItemText>
 					</ListItem>
-					<ListItem divider>
+					<ListItem divider button>
 						<ListItemText>DINING</ListItemText>
 					</ListItem>
-					<ListItem divider>
+					<ListItem divider button>
 						<ListItemText>MEETING & EVENTS</ListItemText>
 					</ListItem>
-					<ListItem divider>
+					<ListItem divider button>
 						<ListItemText>COVID-UPDATES</ListItemText>
 					</ListItem>
 				</List>
@@ -100,7 +100,7 @@ const Header = () => {
 	return (
 		<>
 			<ThemeProvider theme={theme}>
-				<AppBar style={{ background: '#fff' }}>
+				<AppBar style={{ background: ' rgba(252, 252, 252, 0.589)' }}>
 					<Toolbar className="Header">
 						<Button>
 							<img className="Header__Logo" src={logo} alt="nobu logo" />

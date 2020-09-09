@@ -1,21 +1,12 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import Carousel from './components/Carousel';
-import Description from './components/Description';
-import SlideOffers from './components/SlideOffers';
-import RoomsCarousel from './components/RoomsCarousel';
-import CircleForm from './components/CircleForm';
+import MainPage from './containers/MainPage';
+import Rooms from './containers/Rooms';
 
 function App() {
 	return (
 		<div className="App">
-			<Header />
-			<Carousel />
-			<Description />
-			<RoomsCarousel />
-			<SlideOffers />
-			<CircleForm />
+			<Rooms />
 		</div>
 	);
 }
