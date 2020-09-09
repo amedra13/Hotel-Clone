@@ -26,7 +26,7 @@ const CarouselComponent = () => {
 			</div>
 			<div className="Carousel__ImgContainer">
 				<img
-					className="Carousel__Img higherImg"
+					className="Carousel__Img"
 					src={meetingSpace}
 					alt="Nobu Meeting Space"
 				/>
@@ -40,7 +40,7 @@ const CarouselComponent = () => {
 			</div>
 			<div className="Carousel__ImgContainer">
 				<img
-					className="Carousel__Img higherImg"
+					className="Carousel__Img"
 					src={waitingRoom}
 					alt="Nobu Waiting Room"
 				/>

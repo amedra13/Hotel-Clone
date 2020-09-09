@@ -1,28 +1,13 @@
 .Carousel__ImgContainer {
-	height: 70vh;
+	height: auto;
+	max-height: 60vh;
 	width: 100vw;
 	overflow: hidden;
 }
-@media only screen and (max-width: 900px) {
-	.Carousel__ImgContainer {
-		height: 50vh;
-	}
-}
-@media only screen and (max-width: 700px) {
-	.Carousel__ImgContainer {
-		height: 40vh;
-	}
-}
-@media only screen and (max-width: 500px) {
-	.Carousel__ImgContainer {
-		height: 30vh;
-	}
-}
 
 .Carousel__Img {
+	height: auto;
 	width: 100%;
-	transform: translateY(-15%);
-}
-.higherImg {
-	transform: translateY(-28%);
+	object-fit: cover;
+	object-position: 50% 0%;
 }
