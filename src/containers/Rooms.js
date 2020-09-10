@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import SlideGrid from '../hoc/SlideGrid';
 import Grid from '@material-ui/core/Grid';
 import IndividualSlide from '../components/individualSlide/IndividualSlide';
@@ -89,7 +87,6 @@ const Rooms = () => {
 	};
 	return (
 		<div>
-			<Header />
 			<div className={classes.imgContainer}>
 				<img className={classes.carouselImg} src={imgSource} alt="" />
 			</div>
@@ -199,7 +196,6 @@ const Rooms = () => {
 			<SlideGrid>
 				<IndividualSlide info={slideDetails.exploreOffers} />
 			</SlideGrid>
-			<Footer />
 		</div>
 	);
 };

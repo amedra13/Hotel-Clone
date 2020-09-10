@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import MainPage from './containers/MainPage';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/navbar/Header';
+import Footer from './components/footer/Footer';
 import Rooms from './containers/Rooms';
 import Dining from './containers/Dining';
 import Offers from './containers/Offers';

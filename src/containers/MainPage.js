@@ -3,7 +3,7 @@ import Carousel from '../components/Carousel';
 import Description from '../components/Description';
 import SlideOffers from '../components/SlideOffers';
 import RoomsCarousel from '../components/RoomsCarousel';
-import CircleForm from '../components/CircleForm';
+import CircleForm from '../components/circleSignUp/CircleForm';
 
 const MainPage = () => {
 	return (
