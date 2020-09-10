@@ -41,7 +41,7 @@ const useStyles = makeStyles({
 		},
 	},
 	featuresGrid: {
-		width: '80vw',
+		width: '75vw',
 		margin: '0 auto',
 		fontSize: '0.85rem',
 		fontFamily: 'QuickSand',
@@ -170,7 +170,7 @@ const Rooms = () => {
 				spacing={3}
 				direction={match && 'column-reverse'}
 			>
-				<Grid item xs={12} sm={4} fullWidth>
+				<Grid item xs={12} sm={5} md={4} fullWidth>
 					<div className={classes.features}>
 						<h2>Features</h2>
 						<List>
@@ -180,7 +180,7 @@ const Rooms = () => {
 						</List>
 					</div>
 				</Grid>
-				<Grid item xs={12} sm={8} fullWidth>
+				<Grid item xs={12} sm={7} md={8} fullWidth>
 					<div className="RoomType">
 						<h2>{featured.title}</h2>
 						<p>{featured.description}</p>

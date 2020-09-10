@@ -6,7 +6,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import './slideOffers.css';
 
 export default function SlideOffers() {
-	const match = useMediaQuery('(max-width:600px)');
+	const match = useMediaQuery('(max-width:960px)');
 
 	return (
 		<div className="App">

@@ -28,7 +28,7 @@ const useStyles = makeStyles({
 
 const Dining = () => {
 	const classes = useStyles();
-	const match = useMediaQuery('(max-width:600px)');
+	const match = useMediaQuery('(max-width:960px)');
 
 	return (
 		<div>

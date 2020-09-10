@@ -39,7 +39,7 @@ const useStyles = makeStyles({
 
 const MeetingsAndEvents = () => {
 	const classes = useStyles();
-	const match = useMediaQuery('(max-width:600px)');
+	const match = useMediaQuery('(max-width:960px)');
 
 	return (
 		<div>
