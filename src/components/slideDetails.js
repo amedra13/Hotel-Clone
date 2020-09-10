@@ -169,6 +169,14 @@ const slidedetails = {
 			'Allow our dedicated event planners to curate memorable event experiences on your special day with renowned Nobu cuisine, modern design and stunning spaces.',
 		links: ['REQUEST PROPOSAL', 'LEARN MORE'],
 	},
+	exploreOffers: {
+		title: 'OFFERS',
+		source:
+			'https://static-new.lhw.com/HotelImages/Final/LW2764/lw2764_123605426_720x450.jpg',
+		description:
+			'Experience Palo Alto exclusively by Nobu Hotels. Whether it’s a luxurious stay in one of our suites to experiencing our beautiful city of Palo Alto, we assure you your stay will be exceptional.',
+		links: ['Explore Offers'],
+	},
 };
 
 export default slidedetails;

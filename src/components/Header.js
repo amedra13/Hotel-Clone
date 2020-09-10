@@ -3,7 +3,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import PhoneIcon from '@material-ui/icons/Phone';
 import MenuIcon from '@material-ui/icons/Menu';
 import logo from '../images/nobuPaloAlto.png';
 import Drawer from '@material-ui/core/Drawer';
@@ -145,9 +144,6 @@ const Header = () => {
 									Book
 								</Typography>
 							</Button>
-							<IconButton>
-								<PhoneIcon fontSize="large" />
-							</IconButton>
 							{!matches && menuDrawer}
 						</div>
 					</Toolbar>
