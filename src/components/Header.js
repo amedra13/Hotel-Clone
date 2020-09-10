@@ -80,7 +80,12 @@ const Header = () => {
 			>
 				MEETINGS & EVENTS
 			</Typography>
-			<Typography className="Header__tab" variant="button">
+			<Typography
+				className="Header__tab"
+				variant="button"
+				component={Link}
+				to="/covid"
+			>
 				COVID-UPDATES
 			</Typography>
 		</>
@@ -107,11 +112,14 @@ const Header = () => {
 					<ListItem divider button component={Link} to="/dining">
 						<ListItemText>DINING</ListItemText>
 					</ListItem>
-					<ListItem divider button>
+					<ListItem divider button component={Link} to="/events">
 						<ListItemText>MEETING & EVENTS</ListItemText>
 					</ListItem>
-					<ListItem divider button>
+					<ListItem divider button component={Link} to="/covid">
 						<ListItemText>COVID-UPDATES</ListItemText>
+					</ListItem>
+					<ListItem divider button component={Link} to="/">
+						<ListItemText>HOME</ListItemText>
 					</ListItem>
 				</List>
 			</Drawer>
