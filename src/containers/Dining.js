@@ -1,11 +1,10 @@
 import React from 'react';
 import DiningEntrance from '../images/DiningPage/nobu_Dining.jpg';
 import SlideGrid from '../hoc/SlideGrid';
-import IndividualSlide from '../components/IndividualSlide';
+import IndividualSlide from '../components/individualSlide/IndividualSlide';
 import slideDetails from '../components/slideDetails';
 import PageHeader from '../components/pageHeader/PageHeader';
 import ImgHeader from '../components/imgHeader/ImgHeader';
-import './dining.css';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const Dining = () => {
@@ -19,28 +18,10 @@ const Dining = () => {
 				subtitle="NOBU HOTEL IN SILICON VALLEY"
 			/>
 			<SlideGrid>
-				<IndividualSlide
-					info={slideDetails.introDining}
-					imgContainerStyle="Dining__ImgContainer"
-					imgStyle="Dining__img"
-				/>
-				<IndividualSlide
-					info={slideDetails.inRoomDining}
-					imgContainerStyle="Dining__ImgContainer"
-					imgStyle="Dining__img"
-					reverse={!match}
-				/>
-				<IndividualSlide
-					info={slideDetails.nobuAtHome}
-					imgContainerStyle="Dining__ImgContainer"
-					imgStyle="Dining__img"
-				/>
-				<IndividualSlide
-					info={slideDetails.offSiteEvents}
-					imgContainerStyle="Dining__ImgContainer"
-					imgStyle="Dining__img"
-					reverse={!match}
-				/>
+				<IndividualSlide info={slideDetails.introDining} />
+				<IndividualSlide info={slideDetails.inRoomDining} reverse={!match} />
+				<IndividualSlide info={slideDetails.nobuAtHome} />
+				<IndividualSlide info={slideDetails.offSiteEvents} reverse={!match} />
 			</SlideGrid>
 		</div>
 	);

@@ -14,6 +14,18 @@ const useStyles = makeStyles({
 		padding: '0',
 		marginLeft: '25px',
 	},
+	imgContainerStyle: {
+		overflow: 'hidden',
+		borderRadius: '3px',
+		height: '350px',
+		width: '100%',
+	},
+	imgStyle: {
+		width: '100%',
+		height: '100%',
+		objectFit: 'cover',
+		objectPosition: '50% 50%',
+	},
 });
 
 const IndividualSlide = (props) => {
@@ -22,9 +34,9 @@ const IndividualSlide = (props) => {
 	let slide = (
 		<>
 			<Grid item xs={12} md={props.slideWidth ? props.slideWidth : 8}>
-				<div className={props.imgContainerStyle}>
+				<div className={classes.imgContainerStyle}>
 					<img
-						className={props.imgStyle}
+						className={classes.imgStyle}
 						src={props.info.source}
 						alt={props.info.title}
 					/>
@@ -89,9 +101,9 @@ const IndividualSlide = (props) => {
 					})}
 				</Grid>
 				<Grid item xs={12} md={props.slideWidth ? props.slideWidth : 8}>
-					<div className={props.imgContainerStyle}>
+					<div className={classes.imgContainerStyle}>
 						<img
-							className={props.imgStyle}
+							className={classes.imgStyle}
 							src={props.info.source}
 							alt={props.info.title}
 						/>

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SlideGrid from '../hoc/SlideGrid';
 import Grid from '@material-ui/core/Grid';
-import IndividualSlide from '../components/IndividualSlide';
+import IndividualSlide from '../components/individualSlide/IndividualSlide';
 import slideDetails from '../components/slideDetails';
 import Carousel from 'react-material-ui-carousel';
 import bathroom from '../images/Rooms/nobu_bathroom.jpg';
@@ -15,16 +16,8 @@ import roomType from '../components/roomsDescriptions';
 import PageHeader from '../components/pageHeader/PageHeader';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { makeStyles } from '@material-ui/core/styles';
-import './dining.css';
 
 const useStyles = makeStyles({
-	roomsGrid: {
-		width: '98vw',
-		margin: '20px auto',
-		fontSize: '0.85rem',
-		fontFamily: 'QuickSand',
-	},
-
 	imgContainer: {
 		height: 'auto',
 		maxHeight: '60vh',
@@ -203,18 +196,9 @@ const Rooms = () => {
 					/>
 				</div>
 			</Carousel>
-			<Grid
-				container
-				alignItems="flex-start"
-				className={classes.roomsGrid}
-				spacing={4}
-			>
-				<IndividualSlide
-					info={slideDetails.exploreOffers}
-					imgContainerStyle="Dining__ImgContainer"
-					imgStyle="Dining__img"
-				/>
-			</Grid>
+			<SlideGrid>
+				<IndividualSlide info={slideDetails.exploreOffers} />
+			</SlideGrid>
 			<Footer />
 		</div>
 	);
