@@ -5,13 +5,14 @@ import Grid from '@material-ui/core/Grid';
 import IndividualSlide from '../components/IndividualSlide';
 import slideDetails from '../components/slideDetails';
 import PaloAlto from '../images/Offers/nobu_CityofPaloAlto.jpg';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { makeStyles } from '@material-ui/core/styles';
 import './dining.css';
 
 const useStyles = makeStyles({
 	offersGrid: {
 		width: '98vw',
-		margin: '100px auto',
+		margin: '50px auto',
 		fontSize: '0.9rem',
 		fontFamily: 'QuickSand',
 	},
@@ -27,6 +28,7 @@ const useStyles = makeStyles({
 
 const Offers = () => {
 	const classes = useStyles();
+	const match = useMediaQuery('(max-width:600px)');
 
 	return (
 		<div>
@@ -51,7 +53,7 @@ const Offers = () => {
 					imgContainerStyle="Dining__ImgContainer"
 					imgStyle="Dining__img"
 					slideWidth={6}
-					reverse
+					reverse={!match}
 				/>
 				<IndividualSlide
 					info={slideDetails.suites}
@@ -64,7 +66,7 @@ const Offers = () => {
 					imgContainerStyle="Dining__ImgContainer"
 					imgStyle="Dining__img"
 					slideWidth={6}
-					reverse
+					reverse={!match}
 				/>
 				<IndividualSlide
 					info={slideDetails.cycling}
@@ -77,7 +79,7 @@ const Offers = () => {
 					imgContainerStyle="Dining__ImgContainer"
 					imgStyle="Dining__img"
 					slideWidth={6}
-					reverse
+					reverse={!match}
 				/>
 				<IndividualSlide
 					info={slideDetails.napa}
@@ -90,7 +92,7 @@ const Offers = () => {
 					imgContainerStyle="Dining__ImgContainer"
 					imgStyle="Dining__img"
 					slideWidth={6}
-					reverse
+					reverse={!match}
 				/>
 				<IndividualSlide
 					info={slideDetails.workWithUs}
@@ -103,7 +105,7 @@ const Offers = () => {
 					imgContainerStyle="Dining__ImgContainer"
 					imgStyle="Dining__img"
 					slideWidth={6}
-					reverse
+					reverse={!match}
 				/>
 			</Grid>
 			<Footer />

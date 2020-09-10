@@ -2,9 +2,12 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import IndividualSlide from './IndividualSlide';
 import slideDetails from './slideDetails';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import './slideOffers.css';
 
 export default function SlideOffers() {
+	const match = useMediaQuery('(max-width:600px)');
+
 	return (
 		<div className="App">
 			<Grid container alignItems="flex-start" className="Grid" spacing={4}>
@@ -17,7 +20,7 @@ export default function SlideOffers() {
 					info={slideDetails.dining}
 					imgContainerStyle="Offers__ImgContainer"
 					imgStyle="Offers__img"
-					reverse
+					reverse={!match}
 				/>
 				<IndividualSlide
 					info={slideDetails.meetingSpace}

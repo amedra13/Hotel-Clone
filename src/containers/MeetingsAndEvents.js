@@ -5,6 +5,7 @@ import MeetingRoom from '../images/Meetings&Events/nobu_meetingRoom.jpg';
 import Grid from '@material-ui/core/Grid';
 import IndividualSlide from '../components/IndividualSlide';
 import slideDetails from '../components/slideDetails';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { makeStyles } from '@material-ui/core/styles';
 import './dining.css';
 
@@ -38,6 +39,7 @@ const useStyles = makeStyles({
 
 const MeetingsAndEvents = () => {
 	const classes = useStyles();
+	const match = useMediaQuery('(max-width:600px)');
 
 	return (
 		<div>
@@ -51,9 +53,9 @@ const MeetingsAndEvents = () => {
 			</div>
 			<div className={classes.meetingHeader}>
 				<h5>
-					<i>NOBU HOTEL IN SILICON VALLEY</i>
+					<i>NOBU HOTEL PALO ALTO</i>
 				</h5>
-				<h1>ICONIC JAPANESE DINING</h1>
+				<h1>MEETINGS & EVENTS</h1>
 			</div>
 			<Grid
 				container
@@ -70,7 +72,7 @@ const MeetingsAndEvents = () => {
 					info={slideDetails.venues}
 					imgContainerStyle="Dining__ImgContainer"
 					imgStyle="Dining__img"
-					reverse
+					reverse={!match}
 				/>
 				<IndividualSlide
 					info={slideDetails.weddings}

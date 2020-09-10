@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import IndividualSlide from '../components/IndividualSlide';
 import slideDetails from '../components/slideDetails';
 import './dining.css';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
@@ -27,6 +28,7 @@ const useStyles = makeStyles({
 
 const Dining = () => {
 	const classes = useStyles();
+	const match = useMediaQuery('(max-width:600px)');
 
 	return (
 		<div>
@@ -55,7 +57,7 @@ const Dining = () => {
 					info={slideDetails.inRoomDining}
 					imgContainerStyle="Dining__ImgContainer"
 					imgStyle="Dining__img"
-					reverse
+					reverse={!match}
 				/>
 				<IndividualSlide
 					info={slideDetails.nobuAtHome}
@@ -66,7 +68,7 @@ const Dining = () => {
 					info={slideDetails.offSiteEvents}
 					imgContainerStyle="Dining__ImgContainer"
 					imgStyle="Dining__img"
-					reverse
+					reverse={!match}
 				/>
 			</Grid>
 			<Footer />
