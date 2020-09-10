@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
+import SlideGrid from '../hoc/SlideGrid';
 import IndividualSlide from './IndividualSlide';
 import slideDetails from './slideDetails';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -10,7 +10,7 @@ export default function SlideOffers() {
 
 	return (
 		<div className="App">
-			<Grid container alignItems="flex-start" className="Grid" spacing={4}>
+			<SlideGrid>
 				<IndividualSlide
 					info={slideDetails.offers}
 					imgContainerStyle="Offers__ImgContainer"
@@ -27,7 +27,7 @@ export default function SlideOffers() {
 					imgContainerStyle="Offers__ImgContainer"
 					imgStyle="Offers__img"
 				/>
-			</Grid>
+			</SlideGrid>
 		</div>
 	);
 }
