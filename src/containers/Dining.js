@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import DiningEntrance from '../images/DiningPage/nobu_Dining.jpg';
 import Grid from '@material-ui/core/Grid';
 import IndividualSlide from '../components/IndividualSlide';
@@ -32,7 +30,6 @@ const Dining = () => {
 
 	return (
 		<div>
-			<Header />
 			<div className="Dining__Entrance">
 				<img src={DiningEntrance} alt="Resturant Entrance" />
 			</div>
@@ -71,7 +68,6 @@ const Dining = () => {
 					reverse={!match}
 				/>
 			</Grid>
-			<Footer />
 		</div>
 	);
 };

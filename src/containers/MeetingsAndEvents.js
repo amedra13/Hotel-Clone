@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import MeetingRoom from '../images/Meetings&Events/nobu_meetingRoom.jpg';
 import Grid from '@material-ui/core/Grid';
 import IndividualSlide from '../components/IndividualSlide';
@@ -43,7 +41,6 @@ const MeetingsAndEvents = () => {
 
 	return (
 		<div>
-			<Header />
 			<div className={classes.meetingSpace}>
 				<img
 					className={classes.meetingImg}
@@ -80,7 +77,6 @@ const MeetingsAndEvents = () => {
 					imgStyle="Dining__img"
 				/>
 			</Grid>
-			<Footer />
 		</div>
 	);
 };

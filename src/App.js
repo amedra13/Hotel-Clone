@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import MainPage from './containers/MainPage';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import Rooms from './containers/Rooms';
 import Dining from './containers/Dining';
 import Offers from './containers/Offers';
@@ -12,6 +14,7 @@ function App() {
 	return (
 		<BrowserRouter>
 			<div className="App">
+				<Header />
 				<Switch>
 					<Route exact path="/">
 						<MainPage />
@@ -32,6 +35,7 @@ function App() {
 						<CovidUpdates />
 					</Route>
 				</Switch>
+				<Footer />
 			</div>
 		</BrowserRouter>
 	);

@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import covidHeader from '../images/covid/nobu_covidHeader.jpg';
@@ -59,7 +57,6 @@ const CovidUpdates = () => {
 
 	return (
 		<div>
-			<Header />
 			<div className={classes.covidHeader}>
 				<img className={classes.covidImg} src={covidHeader} alt="YellowTail" />
 			</div>
@@ -218,7 +215,6 @@ const CovidUpdates = () => {
 					</ListItem>
 				</List>
 			</div>
-			<Footer />
 		</div>
 	);
 };
