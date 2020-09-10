@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Grid from '@material-ui/core/Grid';
@@ -7,6 +7,8 @@ import slideDetails from '../components/slideDetails';
 import Carousel from 'react-material-ui-carousel';
 import bathroom from '../images/Rooms/nobu_bathroom.jpg';
 import bedroom from '../images/Rooms/nobu_bedroom.jpg';
+import waitingRoom from '../images/MainPage/nobu_waitingRoom.jpg';
+import balcony from '../images/MainPage/nobu_balcony.jpg';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import roomType from '../components/roomsDescriptions';
@@ -57,15 +59,110 @@ const useStyles = makeStyles({
 		alignItems: 'center',
 		fontFamily: 'QuickSand',
 	},
+	roomsCarousel: {
+		margin: '10px auto',
+		width: '75vw',
+	},
+	roomsContainer: {
+		height: 'auto',
+		maxHeight: '150px',
+		width: '100%',
+		overflow: 'hidden',
+	},
+	roomsImg: {
+		height: '100%',
+		width: '100%',
+		objectFit: 'cover',
+	},
 });
 
 const Rooms = () => {
+	const [featured, setFeatured] = useState(roomType.Deluxe);
+	const [imgSource, setImgSource] = useState(bedroom);
 	const classes = useStyles();
 	const match = useMediaQuery('(max-width:600px)');
 
+	const onClickHandler = (roomType, name) => {
+		setFeatured(roomType);
+		switch (name) {
+			case 'Deluxe':
+				setImgSource(bedroom);
+				break;
+			case 'Premium':
+				setImgSource(waitingRoom);
+				break;
+			case 'Suites':
+				setImgSource(balcony);
+				break;
+			case 'Accessible':
+				setImgSource(bedroom);
+				break;
+			default:
+				return;
+		}
+	};
 	return (
 		<div>
 			<Header />
+			<div className={classes.imgContainer}>
+				<img className={classes.carouselImg} src={imgSource} alt="" />
+			</div>
+			<Grid
+				className={classes.roomsCarousel}
+				container
+				justify="center"
+				spacing={1}
+			>
+				<Grid item xs={6} md={3}>
+					<div
+						className={classes.roomsContainer}
+						onClick={() => onClickHandler(roomType.Deluxe, 'Deluxe')}
+					>
+						<img
+							className={classes.roomsImg}
+							src={bedroom}
+							alt="nobu bedroom"
+						/>
+					</div>
+				</Grid>
+				<Grid item xs={6} md={3}>
+					<div
+						className={classes.roomsContainer}
+						onClick={() => onClickHandler(roomType.Premium, 'Premium')}
+					>
+						<img
+							className={classes.roomsImg}
+							src={waitingRoom}
+							alt="nobu waiting room"
+						/>
+					</div>
+				</Grid>
+				<Grid item xs={6} md={3}>
+					<div
+						className={classes.roomsContainer}
+						onClick={() => onClickHandler(roomType.Suites, 'Suites')}
+					>
+						<img
+							className={classes.roomsImg}
+							src={balcony}
+							alt="nobu balcony"
+						/>
+					</div>
+				</Grid>
+				<Grid item xs={6} md={3}>
+					<div
+						className={classes.roomsContainer}
+						onClick={() => onClickHandler(roomType.Accessible, 'Accessible')}
+					>
+						<img
+							className={classes.roomsImg}
+							src={bedroom}
+							alt="nobu bathroom"
+						/>
+					</div>
+				</Grid>
+			</Grid>
+
 			<Grid
 				container
 				alignItems="flex-start"
@@ -77,7 +174,7 @@ const Rooms = () => {
 					<div className={classes.features}>
 						<h2>Features</h2>
 						<List>
-							{roomType.Accessible.features.map((feature) => {
+							{featured.features.map((feature) => {
 								return <ListItem>{feature}</ListItem>;
 							})}
 						</List>
@@ -85,10 +182,10 @@ const Rooms = () => {
 				</Grid>
 				<Grid item xs={12} sm={8} fullWidth>
 					<div className="RoomType">
-						<h2>{roomType.Accessible.title}</h2>
-						<p>{roomType.Accessible.description}</p>
+						<h2>{featured.title}</h2>
+						<p>{featured.description}</p>
 						<p>
-							<i>{roomType.Accessible.subDescription}</i>
+							<i>{featured.subDescription}</i>
 						</p>
 					</div>
 				</Grid>

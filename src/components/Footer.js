@@ -8,6 +8,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
 	footer: {
 		backgroundColor: '#f8f9fa',
+		padding: '35px 0 35px 18px',
 	},
 	listItem: {
 		margin: 0,
