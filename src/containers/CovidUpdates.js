@@ -2,20 +2,10 @@ import React from 'react';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import covidHeader from '../images/covid/nobu_covidHeader.jpg';
+import ImgHeader from '../components/imgHeader/ImgHeader';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
-	covidHeader: {
-		width: '100%',
-		height: 'auto',
-		maxHeight: '50vh',
-		overflow: 'hidden',
-	},
-	covidImg: {
-		width: '100%',
-		objectFit: 'contain',
-		transform: 'translateY(-15%)',
-	},
 	covidBody: {
 		width: '65vw',
 		margin: ' 75px auto',
@@ -57,9 +47,7 @@ const CovidUpdates = () => {
 
 	return (
 		<div>
-			<div className={classes.covidHeader}>
-				<img className={classes.covidImg} src={covidHeader} alt="YellowTail" />
-			</div>
+			<ImgHeader imgSource={covidHeader} description="YellowTail" />
 			<div className={classes.covidBody}>
 				<h2 style={{ textAlign: 'center' }}>OUR MESSAGE</h2>
 				<p>

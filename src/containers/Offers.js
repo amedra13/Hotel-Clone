@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import IndividualSlide from '../components/IndividualSlide';
 import slideDetails from '../components/slideDetails';
 import PageHeader from '../components/pageHeader/PageHeader';
+import ImgHeader from '../components/imgHeader/ImgHeader';
 
 import PaloAlto from '../images/Offers/nobu_CityofPaloAlto.jpg';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -24,9 +25,7 @@ const Offers = () => {
 
 	return (
 		<div>
-			<div className="Dining__Entrance">
-				<img src={PaloAlto} alt="Resturant Entrance" />
-			</div>
+			<ImgHeader imgSource={PaloAlto} description="Resturant Entrance" />
 			<PageHeader
 				title="FEATURED OFFERS"
 				subtitle="DOWNTOWN PALO ALTO, SILICON VALLEY"

@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import IndividualSlide from '../components/IndividualSlide';
 import slideDetails from '../components/slideDetails';
 import PageHeader from '../components/pageHeader/PageHeader';
+import ImgHeader from '../components/imgHeader/ImgHeader';
 import './dining.css';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { makeStyles } from '@material-ui/core/styles';
@@ -23,9 +24,7 @@ const Dining = () => {
 
 	return (
 		<div>
-			<div className="Dining__Entrance">
-				<img src={DiningEntrance} alt="Resturant Entrance" />
-			</div>
+			<ImgHeader imgSource={DiningEntrance} description="Resturant Entrance" />
 			<PageHeader
 				title="ICONIC JAPANESE DINING"
 				subtitle="NOBU HOTEL IN SILICON VALLEY"

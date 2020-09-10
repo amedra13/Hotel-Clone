@@ -1,0 +1,27 @@
+.imgHeader {
+	width: 100%;
+	height: auto;
+	max-height: 60vh;
+	overflow: hidden;
+}
+
+.imgHeader > img {
+	width: 100%;
+	object-fit: cover;
+	transform: translateY(-28%);
+}
+@media only screen and (max-width: 1300px) {
+	.imgHeader > img {
+		transform: translateY(-15%);
+	}
+}
+@media only screen and (max-width: 1000px) {
+	.imgHeader > img {
+		transform: translateY(-10%);
+	}
+}
+@media only screen and (max-width: 900px) {
+	.imgHeader > img {
+		transform: translateY(0);
+	}
+}
