@@ -1,4 +1,4 @@
-const slidedetails = {
+export const mainData = {
 	dining: {
 		title: 'Dining',
 		source:
@@ -22,36 +22,20 @@ const slidedetails = {
 			'We invite you to host your next meeting in one of our meeting and event spaces.  Our meeting rooms accommodate a variety of events from a boardroom-style conference to a sunset reception overlooking the Northern Californian scenery.',
 		links: ['RFP', 'SEE OUR VENUES'],
 	},
-	introDining: {
-		title: 'NOBU PALO ALTO',
+};
+
+export const roomsData = {
+	exploreOffers: {
+		title: 'OFFERS',
 		source:
-			'https://media.bizj.us/view/img/10530012/screen-shot-2017-07-07-at-24539-pm*1200xx2526-1421-0-6.png',
+			'https://static-new.lhw.com/HotelImages/Final/LW2764/lw2764_123605426_720x450.jpg',
 		description:
-			'Nobu Palo Alto, located street level, offers Chef Nobu Matsuhisa’s new-style Japanese cuisine with hints of South American influences. Guests may decide to select an omakase dining experience where the chefs curate a special menu for the occasion or they may decide to enjoy some of the favorite dishes such as Black Cod Miso or Rock Shrimp Tempura. *\n Hours of Operation: Carry-Out Breakfast: 7:00 am – 11:00 am | Lunch: (Sat & Sun only) 12:00pm-2:00pm | Dinner: 5:00 pm – 9:00 pm.',
-		links: ['VIEW MENUS', 'BOOK TABLE'],
+			'Experience Palo Alto exclusively by Nobu Hotels. Whether it’s a luxurious stay in one of our suites to experiencing our beautiful city of Palo Alto, we assure you your stay will be exceptional.',
+		links: ['Explore Offers'],
 	},
-	inRoomDining: {
-		title: 'IN ROOM DINING',
-		source:
-			'https://www.washingtonpost.com/resizer/unTQe8g1AHlXo9WCLmu62pvywCI=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/ZFLNHJFGZAI6PGUYA4KA2LXNAI.jpg',
-		description:
-			'Nobu Palo Alto, located street level, offers Chef Nobu Matsuhisa’s new-style Japanese cuisine with hints of South American influences. Guests may decide to select an omakase dining experience where the chefs curate a special menu for the occasion or they may decide to enjoy some of the favorite dishes such as Black Cod Miso or Rock Shrimp Tempura. Hours of Operation: Carry-Out Breakfast: 7:00 am – 11:00 am | Lunch: (Sat & Sun only) 12:00pm-2:00pm | Dinner: 5:00 pm – 9:00 pm.',
-		links: ['ALL DAY MENU'],
-	},
-	nobuAtHome: {
-		title: 'NOBU AT HOME',
-		source: 'https://media.timeout.com/images/100555145/630/472/image.jpg',
-		description:
-			'Nobu Palo Alto is serving a special menu for take-out and delivery.  Indulge in world-renowned signature Nobu dishes and select beverages at home. Take-out available Wednesday-Sunday 5pm – 9pm. Phones open at 4:30. Please call 650-798-8396 to place your order. Delivery is available via Postmates and Uber Eats.',
-		links: ['VIEW MENU'],
-	},
-	offSiteEvents: {
-		title: 'OFF-SITE EVENTS',
-		source: 'https://pbs.twimg.com/media/Eb-TxmaWoAAt1lj.jpg',
-		description:
-			'Bring the complete Nobu experience to your favorite venue, or add just a touch of Nobu with our many off-premise event concepts and menus. Our dedicated team of professionals are available to provide on-site management of corporate and bridal events, birthdays, bar and bat mitzvahs and other social celebrations. Allow us to bring a taste of Nobu into the comfort of your home, office or private venue. Three-day advanced notice is required.',
-		links: ['VIEW MENU', 'RFP'],
-	},
+};
+
+export const offersData = {
 	cancellation: {
 		title: 'FREE CANCELLATION',
 		source: 'https://cf.bstatic.com/images/hotel/max1024x768/232/232187720.jpg',
@@ -145,6 +129,41 @@ const slidedetails = {
 		],
 		links: ['RESERVE NOW'],
 	},
+};
+
+export const diningData = {
+	introDining: {
+		title: 'NOBU PALO ALTO',
+		source:
+			'https://media.bizj.us/view/img/10530012/screen-shot-2017-07-07-at-24539-pm*1200xx2526-1421-0-6.png',
+		description:
+			'Nobu Palo Alto, located street level, offers Chef Nobu Matsuhisa’s new-style Japanese cuisine with hints of South American influences. Guests may decide to select an omakase dining experience where the chefs curate a special menu for the occasion or they may decide to enjoy some of the favorite dishes such as Black Cod Miso or Rock Shrimp Tempura. *\n Hours of Operation: Carry-Out Breakfast: 7:00 am – 11:00 am | Lunch: (Sat & Sun only) 12:00pm-2:00pm | Dinner: 5:00 pm – 9:00 pm.',
+		links: ['VIEW MENUS', 'BOOK TABLE'],
+	},
+	inRoomDining: {
+		title: 'IN ROOM DINING',
+		source:
+			'https://www.washingtonpost.com/resizer/unTQe8g1AHlXo9WCLmu62pvywCI=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/ZFLNHJFGZAI6PGUYA4KA2LXNAI.jpg',
+		description:
+			'Nobu Palo Alto, located street level, offers Chef Nobu Matsuhisa’s new-style Japanese cuisine with hints of South American influences. Guests may decide to select an omakase dining experience where the chefs curate a special menu for the occasion or they may decide to enjoy some of the favorite dishes such as Black Cod Miso or Rock Shrimp Tempura. Hours of Operation: Carry-Out Breakfast: 7:00 am – 11:00 am | Lunch: (Sat & Sun only) 12:00pm-2:00pm | Dinner: 5:00 pm – 9:00 pm.',
+		links: ['ALL DAY MENU'],
+	},
+	nobuAtHome: {
+		title: 'NOBU AT HOME',
+		source: 'https://media.timeout.com/images/100555145/630/472/image.jpg',
+		description:
+			'Nobu Palo Alto is serving a special menu for take-out and delivery.  Indulge in world-renowned signature Nobu dishes and select beverages at home. Take-out available Wednesday-Sunday 5pm – 9pm. Phones open at 4:30. Please call 650-798-8396 to place your order. Delivery is available via Postmates and Uber Eats.',
+		links: ['VIEW MENU'],
+	},
+	offSiteEvents: {
+		title: 'OFF-SITE EVENTS',
+		source: 'https://pbs.twimg.com/media/Eb-TxmaWoAAt1lj.jpg',
+		description:
+			'Bring the complete Nobu experience to your favorite venue, or add just a touch of Nobu with our many off-premise event concepts and menus. Our dedicated team of professionals are available to provide on-site management of corporate and bridal events, birthdays, bar and bat mitzvahs and other social celebrations. Allow us to bring a taste of Nobu into the comfort of your home, office or private venue. Three-day advanced notice is required.',
+		links: ['VIEW MENU', 'RFP'],
+	},
+};
+export const eventsData = {
 	meeting: {
 		title: 'MEETINGS & EVENTS',
 		source:
@@ -169,14 +188,4 @@ const slidedetails = {
 			'Allow our dedicated event planners to curate memorable event experiences on your special day with renowned Nobu cuisine, modern design and stunning spaces.',
 		links: ['REQUEST PROPOSAL', 'LEARN MORE'],
 	},
-	exploreOffers: {
-		title: 'OFFERS',
-		source:
-			'https://static-new.lhw.com/HotelImages/Final/LW2764/lw2764_123605426_720x450.jpg',
-		description:
-			'Experience Palo Alto exclusively by Nobu Hotels. Whether it’s a luxurious stay in one of our suites to experiencing our beautiful city of Palo Alto, we assure you your stay will be exceptional.',
-		links: ['Explore Offers'],
-	},
 };
-
-export default slidedetails;

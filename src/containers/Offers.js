@@ -1,7 +1,7 @@
 import React from 'react';
 import SlideGrid from '../hoc/SlideGrid';
 import IndividualSlide from '../components/individualSlide/IndividualSlide';
-import slideDetails from '../components/slideDetails';
+import { offersData } from '../components/individualSlide/slidedata/slideData';
 import PageHeader from '../components/pageHeader/PageHeader';
 import ImgHeader from '../components/imgHeader/ImgHeader';
 import PaloAlto from '../images/Offers/nobu_CityofPaloAlto.jpg';
@@ -19,31 +19,31 @@ const Offers = () => {
 			/>
 			<SlideGrid>
 				<IndividualSlide
-					info={slideDetails.cancellation}
+					info={offersData.cancellation}
 					slideWidth={6}
 					reverse={!match}
 				/>
-				<IndividualSlide info={slideDetails.suites} slideWidth={6} />
+				<IndividualSlide info={offersData.suites} slideWidth={6} />
 				<IndividualSlide
-					info={slideDetails.tasteOfNobu}
+					info={offersData.tasteOfNobu}
 					slideWidth={6}
 					reverse={!match}
 				/>
-				<IndividualSlide info={slideDetails.cycling} slideWidth={6} />
+				<IndividualSlide info={offersData.cycling} slideWidth={6} />
 				<IndividualSlide
-					info={slideDetails.driveToUs}
+					info={offersData.driveToUs}
 					slideWidth={6}
 					reverse={!match}
 				/>
-				<IndividualSlide info={slideDetails.napa} slideWidth={6} />
+				<IndividualSlide info={offersData.napa} slideWidth={6} />
 				<IndividualSlide
-					info={slideDetails.localWine}
+					info={offersData.localWine}
 					slideWidth={6}
 					reverse={!match}
 				/>
-				<IndividualSlide info={slideDetails.workWithUs} slideWidth={6} />
+				<IndividualSlide info={offersData.workWithUs} slideWidth={6} />
 				<IndividualSlide
-					info={slideDetails.stayLonger}
+					info={offersData.stayLonger}
 					slideWidth={6}
 					reverse={!match}
 				/>

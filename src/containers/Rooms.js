@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SlideGrid from '../hoc/SlideGrid';
 import Grid from '@material-ui/core/Grid';
 import IndividualSlide from '../components/individualSlide/IndividualSlide';
-import slideDetails from '../components/slideDetails';
+import { roomsData } from '../components/individualSlide/slidedata/slideData';
 import Carousel from 'react-material-ui-carousel';
 import bathroom from '../images/Rooms/nobu_bathroom.jpg';
 import bedroom from '../images/Rooms/nobu_bedroom.jpg';
@@ -194,7 +194,7 @@ const Rooms = () => {
 				</div>
 			</Carousel>
 			<SlideGrid>
-				<IndividualSlide info={slideDetails.exploreOffers} />
+				<IndividualSlide info={roomsData.exploreOffers} />
 			</SlideGrid>
 		</div>
 	);
