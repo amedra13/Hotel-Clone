@@ -1,0 +1,8 @@
+.PageHeader {
+	height: 40vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'QuickSand';
+}

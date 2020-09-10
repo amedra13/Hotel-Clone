@@ -3,6 +3,7 @@ import MeetingRoom from '../images/Meetings&Events/nobu_meetingRoom.jpg';
 import Grid from '@material-ui/core/Grid';
 import IndividualSlide from '../components/IndividualSlide';
 import slideDetails from '../components/slideDetails';
+import PageHeader from '../components/pageHeader/PageHeader';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { makeStyles } from '@material-ui/core/styles';
 import './dining.css';
@@ -18,14 +19,6 @@ const useStyles = makeStyles({
 		width: '100%',
 		objectFit: 'cover',
 		transform: 'translateY(-30%)',
-	},
-	meetingHeader: {
-		height: '40vh',
-		display: 'flex',
-		flexDirection: 'column',
-		justifyContent: 'center',
-		alignItems: 'center',
-		fontFamily: 'QuickSand',
 	},
 	meetingGrid: {
 		width: '98vw',
@@ -48,12 +41,7 @@ const MeetingsAndEvents = () => {
 					alt="Meeting Room"
 				/>
 			</div>
-			<div className={classes.meetingHeader}>
-				<h5>
-					<i>NOBU HOTEL PALO ALTO</i>
-				</h5>
-				<h1>MEETINGS & EVENTS</h1>
-			</div>
+			<PageHeader title="MEETINGS & EVENTS" subtitle="NOBU HOTEL PALO ALTO" />
 			<Grid
 				container
 				alignItems="flex-start"

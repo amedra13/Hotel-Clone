@@ -3,6 +3,7 @@ import DiningEntrance from '../images/DiningPage/nobu_Dining.jpg';
 import Grid from '@material-ui/core/Grid';
 import IndividualSlide from '../components/IndividualSlide';
 import slideDetails from '../components/slideDetails';
+import PageHeader from '../components/pageHeader/PageHeader';
 import './dining.css';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { makeStyles } from '@material-ui/core/styles';
@@ -12,14 +13,6 @@ const useStyles = makeStyles({
 		width: '98vw',
 		margin: '50px auto',
 		fontSize: '0.85rem',
-		fontFamily: 'QuickSand',
-	},
-	diningHeader: {
-		height: '40vh',
-		display: 'flex',
-		flexDirection: 'column',
-		justifyContent: 'center',
-		alignItems: 'center',
 		fontFamily: 'QuickSand',
 	},
 });
@@ -33,12 +26,10 @@ const Dining = () => {
 			<div className="Dining__Entrance">
 				<img src={DiningEntrance} alt="Resturant Entrance" />
 			</div>
-			<div className={classes.diningHeader}>
-				<h5>
-					<i>NOBU HOTEL IN SILICON VALLEY</i>
-				</h5>
-				<h1>ICONIC JAPANESE DINING</h1>
-			</div>
+			<PageHeader
+				title="ICONIC JAPANESE DINING"
+				subtitle="NOBU HOTEL IN SILICON VALLEY"
+			/>
 			<Grid
 				container
 				alignItems="flex-start"

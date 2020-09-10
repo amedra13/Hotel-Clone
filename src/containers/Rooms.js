@@ -12,6 +12,7 @@ import balcony from '../images/MainPage/nobu_balcony.jpg';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import roomType from '../components/roomsDescriptions';
+import PageHeader from '../components/pageHeader/PageHeader';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { makeStyles } from '@material-ui/core/styles';
 import './dining.css';
@@ -50,14 +51,6 @@ const useStyles = makeStyles({
 		border: '1px solid black',
 		padding: '10px',
 		borderRadius: '5px',
-	},
-	roomsHeader: {
-		height: '40vh',
-		display: 'flex',
-		flexDirection: 'column',
-		justifyContent: 'center',
-		alignItems: 'center',
-		fontFamily: 'QuickSand',
 	},
 	roomsCarousel: {
 		margin: '10px auto',
@@ -190,12 +183,10 @@ const Rooms = () => {
 					</div>
 				</Grid>
 			</Grid>
-			<div className={classes.roomsHeader}>
-				<h5>
-					<i>HOTEL IN PALO ALTO, NEAR STANFORD</i>
-				</h5>
-				<h1>ROOMS & SUITES</h1>
-			</div>
+			<PageHeader
+				title="ROOMS & SUITES"
+				subtitle="HOTEL IN PALO ALTO, NEAR STANFORD"
+			/>
 			<Carousel navButtonsAlwaysVisible animation="fade">
 				<div className={classes.imgContainer}>
 					<img

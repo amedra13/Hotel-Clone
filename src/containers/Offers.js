@@ -2,6 +2,8 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import IndividualSlide from '../components/IndividualSlide';
 import slideDetails from '../components/slideDetails';
+import PageHeader from '../components/pageHeader/PageHeader';
+
 import PaloAlto from '../images/Offers/nobu_CityofPaloAlto.jpg';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { makeStyles } from '@material-ui/core/styles';
@@ -12,14 +14,6 @@ const useStyles = makeStyles({
 		width: '98vw',
 		margin: '50px auto',
 		fontSize: '0.9rem',
-		fontFamily: 'QuickSand',
-	},
-	offersHeader: {
-		height: '40vh',
-		display: 'flex',
-		flexDirection: 'column',
-		justifyContent: 'center',
-		alignItems: 'center',
 		fontFamily: 'QuickSand',
 	},
 });
@@ -33,12 +27,10 @@ const Offers = () => {
 			<div className="Dining__Entrance">
 				<img src={PaloAlto} alt="Resturant Entrance" />
 			</div>
-			<div className={classes.offersHeader}>
-				<h5>
-					<i>DOWNTOWN PALO ALTO, SILICON VALLEY</i>
-				</h5>
-				<h1>FEATURED OFFERS</h1>
-			</div>
+			<PageHeader
+				title="FEATURED OFFERS"
+				subtitle="DOWNTOWN PALO ALTO, SILICON VALLEY"
+			/>
 			<Grid
 				container
 				alignItems="flex-start"
