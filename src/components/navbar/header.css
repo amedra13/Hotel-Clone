@@ -17,6 +17,8 @@
 .Header__Tabs > .Header__tab {
 	margin: 0 20px;
 	text-align: center;
+	text-decoration: none;
+	color: black;
 }
 .Header__toolbarMargin {
 	margin-bottom: 5.7rem;
@@ -24,4 +26,5 @@
 .Header__Book {
 	margin: 0;
 	padding: 0;
+	height: 30px;
 }
