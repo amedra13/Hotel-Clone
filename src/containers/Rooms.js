@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ImgHeader from '../components/imgHeader/ImgHeader';
 import SlideGrid from '../hoc/SlideGrid';
 import Grid from '@material-ui/core/Grid';
 import IndividualSlide from '../components/individualSlide/IndividualSlide';
@@ -63,11 +64,14 @@ const useStyles = makeStyles({
 const Rooms = () => {
 	const [featured, setFeatured] = useState(roomType.Deluxe);
 	const [imgSource, setImgSource] = useState(bedroom);
+	const [imgDescription, setImgDescription] = useState('Deluxe');
+
 	const classes = useStyles();
 	const match = useMediaQuery('(max-width:600px)');
 
 	const onClickHandler = (roomType, name) => {
 		setFeatured(roomType);
+		setImgDescription(name);
 		switch (name) {
 			case 'Deluxe':
 				setImgSource(bedroom);
@@ -87,9 +91,7 @@ const Rooms = () => {
 	};
 	return (
 		<div>
-			<div className={classes.imgContainer}>
-				<img className={classes.carouselImg} src={imgSource} alt="" />
-			</div>
+			<ImgHeader imgSource={imgSource} description={imgDescription} />
 			<Grid
 				className={classes.roomsCarousel}
 				container
