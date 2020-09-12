@@ -8,6 +8,7 @@ import Dining from './containers/Dining';
 import Offers from './containers/Offers';
 import MeetingsAndEvents from './containers/MeetingsAndEvents';
 import CovidUpdates from './containers/CovidUpdates';
+import BookReservation from './containers/BookReservation';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
 					</Route>
 					<Route exact path="/covid">
 						<CovidUpdates />
+					</Route>
+					<Route exact path="/book">
+						<BookReservation />
 					</Route>
 				</Switch>
 				<Footer />

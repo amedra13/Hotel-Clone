@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+import Slide from '@material-ui/core/Slide';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
@@ -34,13 +35,21 @@ const IndividualSlide = (props) => {
 	let slide = (
 		<>
 			<Grid item xs={12} md={props.slideWidth ? props.slideWidth : 8}>
-				<div className={classes.imgContainerStyle}>
-					<img
-						className={classes.imgStyle}
-						src={props.info.source}
-						alt={props.info.title}
-					/>
-				</div>
+				<Slide
+					direction="right"
+					timeout={{ enter: '1000ms' }}
+					in
+					mountOnEnter
+					unmountOnExit
+				>
+					<div className={classes.imgContainerStyle}>
+						<img
+							className={classes.imgStyle}
+							src={props.info.source}
+							alt={props.info.title}
+						/>
+					</div>
+				</Slide>
 			</Grid>
 			<Grid container item xs={12} md={props.slideWidth ? props.slideWidth : 4}>
 				<h1>{props.info.title}</h1>
@@ -101,13 +110,21 @@ const IndividualSlide = (props) => {
 					})}
 				</Grid>
 				<Grid item xs={12} md={props.slideWidth ? props.slideWidth : 8}>
-					<div className={classes.imgContainerStyle}>
-						<img
-							className={classes.imgStyle}
-							src={props.info.source}
-							alt={props.info.title}
-						/>
-					</div>
+					<Slide
+						direction="left"
+						in
+						timeout={{ enter: '1000ms' }}
+						mountOnEnter
+						unmountOnExit
+					>
+						<div className={classes.imgContainerStyle}>
+							<img
+								className={classes.imgStyle}
+								src={props.info.source}
+								alt={props.info.title}
+							/>
+						</div>
+					</Slide>
 				</Grid>
 			</>
 		);

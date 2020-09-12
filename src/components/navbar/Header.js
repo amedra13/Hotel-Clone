@@ -159,7 +159,12 @@ const Header = () => {
 					</Button>
 					<div className="Header__Tabs">
 						{matches && tabs}
-						<Button className={classes.Button} variant="contained">
+						<Button
+							className={classes.Button}
+							variant="contained"
+							component={Link}
+							to="/book"
+						>
 							Book
 						</Button>
 						{!matches && menuDrawer}
