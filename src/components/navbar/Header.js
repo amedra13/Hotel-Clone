@@ -12,38 +12,27 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Link } from 'react-router-dom';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-
+import { makeStyles } from '@material-ui/core/styles';
 import './header.css';
 
-const theme = createMuiTheme({
-	palette: {
-		primary: {
-			main: '#000',
-		},
-		secondary: {
-			main: '#fff',
+const useStyles = makeStyles({
+	Button: {
+		backgroundColor: 'black',
+		color: 'white',
+		height: '35px',
+		width: ' 80px',
+		fontWeight: 700,
+		borderRadius: '3px;',
+		'&:hover': {
+			backgroundColor: 'rgba(0,0,0,.8)',
 		},
 	},
 });
 
-theme.typography.button = {
-	fontSize: '.7rem',
-	fontFamily: 'Quicksand',
-	fontWeight: '600',
-	fontStyle: 'italic',
-};
-theme.typography.caption = {
-	fontSize: '1rem',
-	'@media (max-width:1100px)': {
-		fontSize: '.7rem',
-	},
-	fontWeight: 550,
-};
-
 const Header = () => {
 	const [toggleTab, setToggleTab] = useState(false);
 	const matches = useMediaQuery('(min-width:850px)');
+	const classes = useStyles();
 
 	const tabs = (
 		<>
@@ -102,22 +91,58 @@ const Header = () => {
 				onBackdropClick={() => setToggleTab(!toggleTab)}
 			>
 				<List>
-					<ListItem divider button component={Link} to="/rooms">
+					<ListItem
+						divider
+						button
+						component={Link}
+						to="/rooms"
+						onClick={() => setToggleTab(false)}
+					>
 						<ListItemText>ROOMS & SUITES</ListItemText>
 					</ListItem>
-					<ListItem divider button component={Link} to="/offers">
+					<ListItem
+						divider
+						button
+						component={Link}
+						to="/offers"
+						onClick={() => setToggleTab(false)}
+					>
 						<ListItemText>OFFERS</ListItemText>
 					</ListItem>
-					<ListItem divider button component={Link} to="/dining">
+					<ListItem
+						divider
+						button
+						component={Link}
+						to="/dining"
+						onClick={() => setToggleTab(false)}
+					>
 						<ListItemText>DINING</ListItemText>
 					</ListItem>
-					<ListItem divider button component={Link} to="/events">
+					<ListItem
+						divider
+						button
+						component={Link}
+						to="/events"
+						onClick={() => setToggleTab(false)}
+					>
 						<ListItemText>MEETING & EVENTS</ListItemText>
 					</ListItem>
-					<ListItem divider button component={Link} to="/covid">
+					<ListItem
+						divider
+						button
+						component={Link}
+						to="/covid"
+						onClick={() => setToggleTab(false)}
+					>
 						<ListItemText>COVID-UPDATES</ListItemText>
 					</ListItem>
-					<ListItem divider button component={Link} to="/">
+					<ListItem
+						divider
+						button
+						component={Link}
+						to="/"
+						onClick={() => setToggleTab(false)}
+					>
 						<ListItemText>HOME</ListItemText>
 					</ListItem>
 				</List>
@@ -127,29 +152,21 @@ const Header = () => {
 
 	return (
 		<>
-			<ThemeProvider theme={theme}>
-				<AppBar style={{ background: ' rgba(252, 252, 252, 0.589)' }}>
-					<Toolbar className="Header">
-						<Button component={Link} to="/">
-							<img className="Header__Logo" src={logo} alt="nobu logo" />
+			<AppBar style={{ background: ' rgba(252, 252, 252, 0.589)' }}>
+				<Toolbar className="Header">
+					<Button component={Link} to="/">
+						<img className="Header__Logo" src={logo} alt="nobu logo" />
+					</Button>
+					<div className="Header__Tabs">
+						{matches && tabs}
+						<Button className={classes.Button} variant="contained">
+							Book
 						</Button>
-						<div className="Header__Tabs">
-							{matches && tabs}
-							<Button
-								className="Header__Book"
-								variant="contained"
-								color="primary"
-							>
-								<Typography color="secondary" variant="caption" noWrap>
-									Book
-								</Typography>
-							</Button>
-							{!matches && menuDrawer}
-						</div>
-					</Toolbar>
-				</AppBar>
-				<div className="Header__toolbarMargin"></div>
-			</ThemeProvider>
+						{!matches && menuDrawer}
+					</div>
+				</Toolbar>
+			</AppBar>
+			<div className="Header__toolbarMargin"></div>
 		</>
 	);
 };
