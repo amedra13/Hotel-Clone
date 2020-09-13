@@ -46,8 +46,14 @@
 	width: 100%;
 	align-self: center;
 	align-items: center;
+	border: 2px solid purple;
 }
 .Book__numberOfPeople > p {
 	padding: 0;
 	margin: 0;
+}
+.Book__MenuItem {
+	display: flex;
+	width: 200px;
+	justify-content: space-evenly;
 }

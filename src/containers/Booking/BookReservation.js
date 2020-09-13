@@ -4,6 +4,8 @@ import GroupIcon from '@material-ui/icons/Group';
 import EmojiTransportationIcon from '@material-ui/icons/EmojiTransportation';
 import PhoneIcon from '@material-ui/icons/Phone';
 import Grid from '@material-ui/core/Grid';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 import DateFnsUtils from '@date-io/date-fns';
 import {
 	MuiPickersUtilsProvider,
@@ -26,6 +28,11 @@ const useStyles = makeStyles({
 const BookReservation = () => {
 	const [beginDate, setBeginDate] = useState(new Date());
 	const [endDate, setEndDate] = useState(new Date());
+
+	const [anchorEl, setAnchorEl] = useState(null);
+	const [adults, setAdults] = useState(0);
+	const [children, setChildren] = useState(0);
+
 	const classes = useStyles();
 
 	const beginDateChange = (date) => {
@@ -35,11 +42,31 @@ const BookReservation = () => {
 		setEndDate(date);
 	};
 
+	const addAdult = () => {
+		setAdults((prevAdult) => prevAdult + 1);
+	};
+	const minusAdult = () => {
+		setAdults((prevAdult) => prevAdult - 1);
+	};
+	const addChild = () => {
+		setChildren((prevChildren) => prevChildren + 1);
+	};
+	const minusChild = () => {
+		setChildren((prevChildren) => prevChildren - 1);
+	};
+
 	const displayInfo = () => {
 		console.log(beginDate);
 		console.log(endDate);
 	};
 
+	const handleClick = (event) => {
+		setAnchorEl(event.currentTarget);
+	};
+
+	const handleClose = () => {
+		setAnchorEl(null);
+	};
 	return (
 		<div className="Book">
 			<MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -68,12 +95,40 @@ const BookReservation = () => {
 					spacing={5}
 				>
 					<Grid item>
-						<div className="Book__GuestInfo">
-							<GroupIcon />
-							<div className="Book__numberOfPeople">
-								<p>Guests</p>
-								<p>1 Adult, 0 Children</p>
+						<div>
+							<div className="Book__GuestInfo" onClick={handleClick}>
+								<GroupIcon />
+								<div className="Book__numberOfPeople">
+									<p>Guests</p>
+									<p>
+										{adults} Adult, {children} Children
+									</p>
+								</div>
 							</div>
+							<Menu
+								id="simple-menu"
+								anchorEl={anchorEl}
+								keepMounted
+								open={Boolean(anchorEl)}
+								onClose={handleClose}
+							>
+								<MenuItem>
+									<div className="Book__MenuItem">
+										<p>Adults</p>
+										<button onClick={addAdult}> +</button>
+										<p>{adults}</p>
+										<button onClick={minusAdult}>-</button>
+									</div>
+								</MenuItem>
+								<MenuItem>
+									<div className="Book__MenuItem">
+										<p>Children</p>
+										<button onClick={addChild}> +</button>
+										<p>{children}</p>
+										<button onClick={minusChild}>-</button>
+									</div>
+								</MenuItem>
+							</Menu>
 						</div>
 					</Grid>
 					<Grid item>
