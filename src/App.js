@@ -8,7 +8,7 @@ import Dining from './containers/Dining';
 import Offers from './containers/Offers';
 import MeetingsAndEvents from './containers/MeetingsAndEvents';
 import CovidUpdates from './containers/CovidUpdates';
-import BookReservation from './containers/BookReservation';
+import BookReservation from './containers/Booking/BookReservation';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 function App() {

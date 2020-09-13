@@ -1,0 +1,36 @@
+.Book {
+	font-family: 'QuickSand';
+}
+.Book__ImgHeader {
+	background-image: url('../../images/MainPage/nobu_waitingRoom.jpg');
+	height: 400px;
+	background-attachment: fixed;
+	background-position: 50% 275%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.Book__ContactContainer {
+	height: 45%;
+	width: 350px;
+	margin: 0 100px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.6);
+	font-family: 'QuickSand';
+	font-size: 0.9rem;
+}
+
+.Book__ContactInfo {
+	display: flex;
+	align-items: center;
+}
+.Book_Announcement {
+	margin: 15px 100px;
+	border: 1px solid rgba(0, 0, 0, 0.274);
+	border-radius: 5px;
+	padding: 5px 25px;
+}
