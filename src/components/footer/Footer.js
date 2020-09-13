@@ -49,7 +49,7 @@ const Footer = () => {
 	];
 
 	return (
-		<Grid className={classes.footer} container fillWidth spacing={3}>
+		<Grid className={classes.footer} container spacing={3}>
 			<Grid item xs={6} sm={3}>
 				<List disablePadding className={classes.list}>
 					{compliance.map((tab) => {

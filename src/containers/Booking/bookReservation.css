@@ -23,14 +23,31 @@
 	font-family: 'QuickSand';
 	font-size: 0.9rem;
 }
+.Book__GuestContiner {
+	width: 85vw;
+	margin: 15px auto;
+	border: 2px solid purple;
+}
 
 .Book__ContactInfo {
 	display: flex;
 	align-items: center;
 }
 .Book_Announcement {
-	margin: 15px 100px;
+	width: 85vw;
+	margin: 15px auto;
 	border: 1px solid rgba(0, 0, 0, 0.274);
 	border-radius: 5px;
 	padding: 5px 25px;
+}
+.Book__GuestInfo {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	align-self: center;
+	align-items: center;
+}
+.Book__numberOfPeople > p {
+	padding: 0;
+	margin: 0;
 }
