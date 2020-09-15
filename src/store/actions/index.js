@@ -6,3 +6,5 @@ export {
 	beginDateChange,
 	endDateChange,
 } from './dates';
+
+export { bookNow } from './room';

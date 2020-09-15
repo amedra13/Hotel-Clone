@@ -5,6 +5,7 @@ const initialState = {
 	children: 1,
 	beginDate: new Date(),
 	endDate: new Date(),
+	nights: 3,
 };
 
 const addAdult = (state) => {
@@ -13,7 +14,7 @@ const addAdult = (state) => {
 	return { ...state, adults: newAdults };
 };
 const subAdult = (state) => {
-	if (state.adults === 0) return state;
+	if (state.adults === 1) return state;
 	const newAdults = state.adults - 1;
 	return { ...state, adults: newAdults };
 };
@@ -35,7 +36,7 @@ const endDate = (state, newDate) => {
 	return { ...state, endDate: newDate };
 };
 
-const reducer = (state = initialState, action) => {
+const dateReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case actions.ADD_ADULT:
 			return addAdult(state);
@@ -54,4 +55,4 @@ const reducer = (state = initialState, action) => {
 	}
 };
 
-export default reducer;
+export default dateReducer;

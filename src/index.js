@@ -2,12 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-
-import ReservationReducer from './store/reducers/reservationReducer';
+import dateReducer from './store/reducers/dateReducer';
+import roomReducer from './store/reducers/roomReducer';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 
-const store = createStore(ReservationReducer);
+const rootReducer = combineReducers({
+	date: dateReducer,
+	room: roomReducer,
+});
+
+const store = createStore(rootReducer);
 
 const app = (
 	<Provider store={store}>

@@ -45,22 +45,23 @@ const Summary = (props) => {
 						</p>
 						<p>
 							<i>
-								{props.adults} Adults, {props.children} Children
+								{props.adults} Adults, {props.children} Children, {props.nights}{' '}
+								nights
 							</i>
 						</p>
 					</div>
 					<div className={classes.summaryTab}>
 						<div>
-							<p>Premium Two Double Beds ADA</p>
+							<p>{props.roomSelected}</p>
 							<p>
 								<i>Free Cancellation</i>
 							</p>
 						</div>
-						<p>$449</p>
+						<p>${props.roomRate}</p>
 					</div>
 					<div className={classes.summaryTab}>
 						<p>Taxes and Fees</p>
-						<p>$73.48</p>
+						<p>${(props.roomRate * 0.157).toFixed(2)}</p>
 					</div>
 					<div>
 						<p>Edit | Remove</p>
@@ -68,7 +69,7 @@ const Summary = (props) => {
 				</div>
 				<div className={classes.summaryTab}>
 					<h3>Total: </h3>
-					<h3>$522.48</h3>
+					<h3>${(props.roomRate * 1.157).toFixed(2)}</h3>
 				</div>
 				<Button variant="outlined" fullWidth>
 					Continue
@@ -80,10 +81,13 @@ const Summary = (props) => {
 
 const mapStateToProps = (state) => {
 	return {
-		adults: state.adults,
-		children: state.children,
-		beginDate: state.beginDate,
-		endDate: state.endDate,
+		adults: state.date.adults,
+		children: state.date.children,
+		beginDate: state.date.beginDate,
+		endDate: state.date.endDate,
+		roomSelected: state.room.roomType,
+		roomRate: state.room.rate,
+		nights: state.date.nights,
 	};
 };
 

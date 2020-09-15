@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../../store/actions/index';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
@@ -45,7 +47,7 @@ const useStyles = makeStyles({
 	},
 });
 
-export default function App(props) {
+function RoomOptions(props) {
 	const classes = useStyles();
 
 	return (
@@ -97,7 +99,11 @@ export default function App(props) {
 								<p>{`$${props.price}`}</p>
 								<p>Per Night</p>
 								<p>excluding taxes & fees</p>
-								<Button variant="outlined" fullWidth>
+								<Button
+									variant="outlined"
+									fullWidth
+									onClick={() => props.onBookNow(props.title, props.price)}
+								>
 									BOOK NOW
 								</Button>
 							</div>
@@ -108,3 +114,11 @@ export default function App(props) {
 		</div>
 	);
 }
+
+const mapDispatchToProps = (dispatch) => {
+	return {
+		onBookNow: (title, price) => dispatch(actions.bookNow(title, price)),
+	};
+};
+
+export default connect(null, mapDispatchToProps)(RoomOptions);

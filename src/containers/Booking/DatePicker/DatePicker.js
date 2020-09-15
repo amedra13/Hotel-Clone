@@ -161,10 +161,10 @@ const DatePicker = (props) => {
 
 const mapStateToProps = (state) => {
 	return {
-		adults: state.adults,
-		children: state.children,
-		beginDate: state.beginDate,
-		endDate: state.endDate,
+		adults: state.date.adults,
+		children: state.date.children,
+		beginDate: state.date.beginDate,
+		endDate: state.date.endDate,
 	};
 };
 const mapDispatchToProps = (dispatch) => {
