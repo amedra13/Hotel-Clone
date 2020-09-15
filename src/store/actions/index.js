@@ -1,1 +1,8 @@
-export { addAdult, subAdult, addChild, subChild } from './dates';
+export {
+	addAdult,
+	subAdult,
+	addChild,
+	subChild,
+	beginDateChange,
+	endDateChange,
+} from './dates';

@@ -3,6 +3,8 @@ import * as actions from '../actions/actions';
 const initialState = {
 	adults: 2,
 	children: 1,
+	beginDate: new Date(),
+	endDate: new Date(),
 };
 
 const addAdult = (state) => {
@@ -26,6 +28,13 @@ const subChild = (state) => {
 	return { ...state, children: newChildren };
 };
 
+const beginDate = (state, newDate) => {
+	return { ...state, beginDate: newDate };
+};
+const endDate = (state, newDate) => {
+	return { ...state, endDate: newDate };
+};
+
 const reducer = (state = initialState, action) => {
 	switch (action.type) {
 		case actions.ADD_ADULT:
@@ -36,6 +45,10 @@ const reducer = (state = initialState, action) => {
 			return addChild(state);
 		case actions.SUB_CHILD:
 			return subChild(state);
+		case actions.BEGINDATE_CHANGE:
+			return beginDate(state, action.newDate);
+		case actions.ENDDATE_CHANGE:
+			return endDate(state, action.newDate);
 		default:
 			return state;
 	}

@@ -21,6 +21,7 @@ const BookReservation = () => {
 					{RoomDetails.map((room) => {
 						return (
 							<RoomOptions
+								key={room.title}
 								title={room.title}
 								dimensions={room.dimensions}
 								description={room.description}
@@ -30,7 +31,7 @@ const BookReservation = () => {
 						);
 					})}
 				</Grid>
-				<Grid item sm={0} md={4}>
+				<Grid item md={4}>
 					{!match && <Summary />}
 				</Grid>
 			</Grid>

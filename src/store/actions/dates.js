@@ -20,3 +20,16 @@ export const subChild = () => {
 		type: actionTypes.SUB_CHILD,
 	};
 };
+
+export const beginDateChange = (date) => {
+	return {
+		type: actionTypes.BEGINDATE_CHANGE,
+		newDate: date,
+	};
+};
+export const endDateChange = (date) => {
+	return {
+		type: actionTypes.ENDDATE_CHANGE,
+		newDate: date,
+	};
+};

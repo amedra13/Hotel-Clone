@@ -36,23 +36,14 @@ const useStyles = makeStyles({
 });
 
 const DatePicker = (props) => {
-	const [beginDate, setBeginDate] = useState(new Date());
-	const [endDate, setEndDate] = useState(beginDate);
 	const [anchorEl, setAnchorEl] = useState(null);
 	const [activeStep, setActiveStep] = useState(0);
 
 	const classes = useStyles();
 
-	const beginDateChange = (date) => {
-		setBeginDate(date);
-	};
-	const endDateChange = (date) => {
-		setEndDate(date);
-	};
-
 	const displayInfo = () => {
-		console.log(beginDate.getDate());
-		console.log(endDate.getDate());
+		console.log(props.beginDate.toDateString().replaceAll(' ', ', '));
+		console.log(props.endDate.toDateString().replaceAll(' ', ', '));
 		setActiveStep(1);
 	};
 
@@ -119,8 +110,8 @@ const DatePicker = (props) => {
 							label="Check-In"
 							disablePast
 							autoOk
-							value={beginDate}
-							onChange={beginDateChange}
+							value={props.beginDate}
+							onChange={props.onBeginDate}
 						/>
 					</Grid>
 					<Grid item>
@@ -133,10 +124,10 @@ const DatePicker = (props) => {
 							label="Check-Out"
 							disablePast
 							autoOk
-							minDate={beginDate}
+							minDate={props.beginDate}
 							minDateMessage={null}
-							value={endDate}
-							onChange={endDateChange}
+							value={props.endDate}
+							onChange={props.onEndDate}
 						/>
 					</Grid>
 					<Grid item>
@@ -172,6 +163,8 @@ const mapStateToProps = (state) => {
 	return {
 		adults: state.adults,
 		children: state.children,
+		beginDate: state.beginDate,
+		endDate: state.endDate,
 	};
 };
 const mapDispatchToProps = (dispatch) => {
@@ -180,6 +173,8 @@ const mapDispatchToProps = (dispatch) => {
 		onSubAdult: () => dispatch(actions.subAdult()),
 		onAddChild: () => dispatch(actions.addChild()),
 		onSubChild: () => dispatch(actions.subChild()),
+		onBeginDate: (e) => dispatch(actions.beginDateChange(e)),
+		onEndDate: (e) => dispatch(actions.endDateChange(e)),
 	};
 };
 

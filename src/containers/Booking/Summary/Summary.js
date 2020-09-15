@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
@@ -17,7 +18,7 @@ const useStyles = makeStyles({
 	},
 });
 
-const Summary = () => {
+const Summary = (props) => {
 	const classes = useStyles();
 
 	return (
@@ -37,10 +38,15 @@ const Summary = () => {
 				<div className={classes.bottomBorder}>
 					<div>
 						<p>
-							<strong>Mon, Sep 14, 2020 - Tue, Sep 15, 2020</strong>
+							<strong>
+								{props.beginDate.toDateString().replaceAll(' ', ', ')} -{' '}
+								{props.endDate.toDateString().replaceAll(' ', ', ')}
+							</strong>
 						</p>
 						<p>
-							<i>1 adult</i>
+							<i>
+								{props.adults} Adults, {props.children} Children
+							</i>
 						</p>
 					</div>
 					<div className={classes.summaryTab}>
@@ -72,4 +78,13 @@ const Summary = () => {
 	);
 };
 
-export default Summary;
+const mapStateToProps = (state) => {
+	return {
+		adults: state.adults,
+		children: state.children,
+		beginDate: state.beginDate,
+		endDate: state.endDate,
+	};
+};
+
+export default connect(mapStateToProps)(Summary);
