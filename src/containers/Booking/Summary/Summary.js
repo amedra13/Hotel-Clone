@@ -61,7 +61,7 @@ const Summary = (props) => {
 					</div>
 					<div className={classes.summaryTab}>
 						<p>Taxes and Fees</p>
-						<p>${(props.roomRate * 0.157).toFixed(2)}</p>
+						<p>${(props.roomRate * 0.157 * props.nights).toFixed(2)}</p>
 					</div>
 					<div>
 						<p>Edit | Remove</p>
@@ -69,7 +69,7 @@ const Summary = (props) => {
 				</div>
 				<div className={classes.summaryTab}>
 					<h3>Total: </h3>
-					<h3>${(props.roomRate * 1.157).toFixed(2)}</h3>
+					<h3>${(props.roomRate * 1.157 * props.nights).toFixed(2)}</h3>
 				</div>
 				<Button variant="outlined" fullWidth>
 					Continue
