@@ -1,0 +1,38 @@
+.Date__ImgHeader {
+	background-image: url('../../../images/MainPage/nobu_waitingRoom.jpg');
+	height: 400px;
+	background-attachment: fixed;
+	background-position: 50% 275%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.Date__ContactContainer {
+	height: 45%;
+	width: 350px;
+	margin: 0 100px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.6);
+	font-family: 'QuickSand';
+	font-size: 0.9rem;
+}
+.Date__GuestContiner {
+	width: 85vw;
+	margin: 15px auto;
+}
+
+.Date__ContactInfo {
+	display: flex;
+	align-items: center;
+}
+.Date_Announcement {
+	width: 85vw;
+	margin: 15px auto;
+	border: 1px solid rgba(0, 0, 0, 0.274);
+	border-radius: 5px;
+	padding: 5px 25px;
+}
