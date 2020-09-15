@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../../store/actions/index';
 import Button from '@material-ui/core/Button';
 import GroupIcon from '@material-ui/icons/Group';
 import Grid from '@material-ui/core/Grid';
@@ -33,7 +35,7 @@ const useStyles = makeStyles({
 	},
 });
 
-const DatePicker = () => {
+const DatePicker = (props) => {
 	const [beginDate, setBeginDate] = useState(new Date());
 	const [endDate, setEndDate] = useState(beginDate);
 
@@ -98,7 +100,7 @@ const DatePicker = () => {
 								<div className="Date__numberOfPeople">
 									<p>Guests</p>
 									<p>
-										{adults} Adult, {children} Children
+										{props.adults} Adult, {children} Children
 									</p>
 								</div>
 							</div>
@@ -112,8 +114,8 @@ const DatePicker = () => {
 								<MenuItem>
 									<div className="Date__MenuItem">
 										<p>Adults</p>
-										<button onClick={addAdult}> +</button>
-										<p>{adults}</p>
+										<button onClick={props.onAddAdult}> +</button>
+										<p>{props.adults}</p>
 										<button onClick={minusAdult}>-</button>
 									</div>
 								</MenuItem>
@@ -187,4 +189,15 @@ const DatePicker = () => {
 	);
 };
 
-export default DatePicker;
+const mapStateToProps = (state) => {
+	return {
+		adults: state.adults,
+	};
+};
+const mapDispatchToProps = (dispatch) => {
+	return {
+		onAddAdult: () => dispatch(actions.addAdult()),
+	};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(DatePicker);
