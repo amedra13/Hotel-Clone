@@ -5,6 +5,7 @@ import BookingHeader from './bookHeader/BookingHeader';
 import Summary from './Summary/Summary';
 import Grid from '@material-ui/core/Grid';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import RoomDetails from '../../components/Booking/RoomOptionDetails';
 
 import './bookReservation.css';
 
@@ -17,7 +18,17 @@ const BookReservation = () => {
 			<Grid container spacing={2}>
 				<Grid item sm={12} md={8}>
 					<DatePicker />
-					<RoomOptions />
+					{RoomDetails.map((room) => {
+						return (
+							<RoomOptions
+								title={room.title}
+								dimensions={room.dimensions}
+								description={room.description}
+								price={room.rate}
+								roomImg={room.roomImg}
+							/>
+						);
+					})}
 				</Grid>
 				<Grid item sm={0} md={4}>
 					{!match && <Summary />}

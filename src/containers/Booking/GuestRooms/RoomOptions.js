@@ -1,10 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 import WifiIcon from '@material-ui/icons/Wifi';
 import AcUnitIcon from '@material-ui/icons/AcUnit';
 import SmokeFreeIcon from '@material-ui/icons/SmokeFree';
-import Room from '../../../images/Rooms/nobu_bedroom.jpg';
 
 import './roomOptions.css';
 
@@ -12,7 +12,9 @@ const useStyles = makeStyles({
 	root: {
 		width: '90%',
 		margin: '0 auto',
-		border: '1px solid black',
+		marginBottom: '30px',
+		border: '1px solid rgba(0,0,0,.274)',
+		borderRadius: '5px',
 	},
 	roomType: {
 		padding: '10px',
@@ -43,7 +45,7 @@ const useStyles = makeStyles({
 	},
 });
 
-export default function App() {
+export default function App(props) {
 	const classes = useStyles();
 
 	return (
@@ -53,7 +55,7 @@ export default function App() {
 					<div className={classes.roomImgContainer}>
 						<img
 							className={classes.roomOptions__Img}
-							src={Room}
+							src={props.roomImg}
 							alt="Nobu Room"
 						/>
 					</div>
@@ -75,25 +77,29 @@ export default function App() {
 				<Grid item sm={12} md={8}>
 					<div>
 						<div className={classes.roomType}>
-							<h2>Deluxe Double Queen Room</h2>
-							<p>Sleeps 4/2 Queen 320 ft²</p>
-							<p>Deluxe Double Queen Room (320 f²/30 m²)</p>
-							<button>Room details</button>
+							<h2>{props.title}</h2>
+							<p>{props.dimensions.join(' | ')}</p>
+							<p>{props.description}</p>
+							<Button variant="outlined">Room Details</Button>
 						</div>
 						<div className={classes.roomContainer}>
 							<div className={classes.roomType}>
-								<button>Free cancellation</button>
+								<p>
+									<i>Free Cancellation</i>
+								</p>
 								<p>Guaranteed with Credit Card</p>
 								<p>
 									Most Flexible Rate. Includes access to WiFi and In-Room Dining
 									by Nobu.
 								</p>
 							</div>
-							<div className={classes.roomType}>
-								<p>$449</p>
+							<div className={classes.roomType} style={{ textAlign: 'right' }}>
+								<p>{`$${props.price}`}</p>
 								<p>Per Night</p>
 								<p>excluding taxes & fees</p>
-								<button>BOOK NOW</button>
+								<Button variant="outlined" fullWidth>
+									BOOK NOW
+								</Button>
 							</div>
 						</div>
 					</div>

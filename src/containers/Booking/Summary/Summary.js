@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
 	summaryContainer: {
-		border: '1px solid black',
+		border: '1px solid rgba(0,0,0,.274)',
 		borderRadius: '5px',
 		marginRight: '50px',
 		padding: '20px',
@@ -13,7 +13,7 @@ const useStyles = makeStyles({
 		justifyContent: 'space-between',
 	},
 	bottomBorder: {
-		bottomBorder: '1px solid black',
+		borderBottom: '1px solid rgba(0,0,0,.3)',
 	},
 });
 
@@ -24,7 +24,7 @@ const Summary = () => {
 		<>
 			<div className={classes.summaryContainer}>
 				<h2>Your Stay</h2>
-				<div className={classes.summaryTab}>
+				<div className={`${classes.summaryTab} ${classes.bottomBorder}`}>
 					<div>
 						<p>Check-In</p>
 						<p>After 3:00 PM</p>
@@ -34,10 +34,14 @@ const Summary = () => {
 						<p>Before 12:00 PM</p>
 					</div>
 				</div>
-				<div>
+				<div className={classes.bottomBorder}>
 					<div>
-						<p>Mon, Sep 14, 2020 - Tue, Sep 15, 2020</p>
-						<p>1 adult</p>
+						<p>
+							<strong>Mon, Sep 14, 2020 - Tue, Sep 15, 2020</strong>
+						</p>
+						<p>
+							<i>1 adult</i>
+						</p>
 					</div>
 					<div className={classes.summaryTab}>
 						<div>

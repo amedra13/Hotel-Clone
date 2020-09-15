@@ -9,7 +9,7 @@ const useStyles = makeStyles({
 	footer: {
 		backgroundColor: '#f8f9fa',
 		paddingLeft: '18px',
-		marginTop: '65px',
+		marginTop: '0px',
 	},
 	listItem: {
 		margin: 0,
