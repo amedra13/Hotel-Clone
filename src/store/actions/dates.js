@@ -27,7 +27,8 @@ export const beginDateChange = (date) => {
 		newDate: date,
 	};
 };
-export const endDateChange = (date) => {
+export const endDateChange = (date, number) => {
+	console.log(date);
 	return {
 		type: actionTypes.ENDDATE_CHANGE,
 		newDate: date,

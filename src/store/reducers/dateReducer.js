@@ -1,11 +1,11 @@
 import * as actions from '../actions/actions';
 
 const initialState = {
-	adults: 2,
-	children: 1,
+	adults: 1,
+	children: 0,
 	beginDate: new Date(),
 	endDate: new Date(),
-	nights: 3,
+	nights: 1,
 };
 
 const addAdult = (state) => {
@@ -33,7 +33,9 @@ const beginDate = (state, newDate) => {
 	return { ...state, beginDate: newDate };
 };
 const endDate = (state, newDate) => {
-	return { ...state, endDate: newDate };
+	let firstDay = state.beginDate.getDate();
+	let lastDay = newDate.getDate();
+	return { ...state, endDate: newDate, nights: lastDay - firstDay };
 };
 
 const dateReducer = (state = initialState, action) => {

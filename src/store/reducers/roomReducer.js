@@ -1,8 +1,8 @@
 import * as actions from '../actions/actions';
 
 const initialState = {
-	roomType: 'Zen Premium Suite With 1 King Bed',
-	rate: 549,
+	roomType: null,
+	rate: null,
 	price: 0,
 };
 
