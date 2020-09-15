@@ -2,12 +2,11 @@
 	background-image: url('../../../images/MainPage/nobu_waitingRoom.jpg');
 	height: 400px;
 	background-attachment: fixed;
-	background-position: 50% 275%;
+	background-position: 50% 300%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
 }
-
 .Date__ContactContainer {
 	height: 45%;
 	width: 350px;
