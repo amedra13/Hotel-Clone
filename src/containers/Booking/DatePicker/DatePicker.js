@@ -38,11 +38,7 @@ const useStyles = makeStyles({
 const DatePicker = (props) => {
 	const [beginDate, setBeginDate] = useState(new Date());
 	const [endDate, setEndDate] = useState(beginDate);
-
 	const [anchorEl, setAnchorEl] = useState(null);
-	const [adults, setAdults] = useState(0);
-	const [children, setChildren] = useState(0);
-
 	const [activeStep, setActiveStep] = useState(0);
 
 	const classes = useStyles();
@@ -52,23 +48,6 @@ const DatePicker = (props) => {
 	};
 	const endDateChange = (date) => {
 		setEndDate(date);
-	};
-
-	const addAdult = () => {
-		if (adults === 4) return;
-		setAdults((prevAdult) => prevAdult + 1);
-	};
-	const minusAdult = () => {
-		if (adults === 0) return;
-		setAdults((prevAdult) => prevAdult - 1);
-	};
-	const addChild = () => {
-		if (children === 4) return;
-		setChildren((prevChildren) => prevChildren + 1);
-	};
-	const minusChild = () => {
-		if (children === 0) return;
-		setChildren((prevChildren) => prevChildren - 1);
 	};
 
 	const displayInfo = () => {
@@ -100,7 +79,7 @@ const DatePicker = (props) => {
 								<div className="Date__numberOfPeople">
 									<p>Guests</p>
 									<p>
-										{props.adults} Adult, {children} Children
+										{props.adults} Adult, {props.children} Children
 									</p>
 								</div>
 							</div>
@@ -116,15 +95,15 @@ const DatePicker = (props) => {
 										<p>Adults</p>
 										<button onClick={props.onAddAdult}> +</button>
 										<p>{props.adults}</p>
-										<button onClick={minusAdult}>-</button>
+										<button onClick={props.onSubAdult}>-</button>
 									</div>
 								</MenuItem>
 								<MenuItem>
 									<div className="Date__MenuItem">
 										<p>Children</p>
-										<button onClick={addChild}> +</button>
-										<p>{children}</p>
-										<button onClick={minusChild}>-</button>
+										<button onClick={props.onAddChild}> +</button>
+										<p>{props.children}</p>
+										<button onClick={props.onSubChild}>-</button>
 									</div>
 								</MenuItem>
 							</Menu>
@@ -192,11 +171,15 @@ const DatePicker = (props) => {
 const mapStateToProps = (state) => {
 	return {
 		adults: state.adults,
+		children: state.children,
 	};
 };
 const mapDispatchToProps = (dispatch) => {
 	return {
 		onAddAdult: () => dispatch(actions.addAdult()),
+		onSubAdult: () => dispatch(actions.subAdult()),
+		onAddChild: () => dispatch(actions.addChild()),
+		onSubChild: () => dispatch(actions.subChild()),
 	};
 };
 

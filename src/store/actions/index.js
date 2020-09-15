@@ -1,1 +1,1 @@
-export { addAdult } from './dates';
+export { addAdult, subAdult, addChild, subChild } from './dates';
