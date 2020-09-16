@@ -33,7 +33,7 @@ const GuestDetails = (props) => {
 	return (
 		<div className={classes.guestRoot}>
 			<Grid container className={classes.guestContainer} spacing={3}>
-				<Grid item xs={12} sm={8}>
+				<Grid item sm={12} md={8}>
 					<div>
 						<h1 style={{ marginBottom: '0' }}>GUEST DETAILS</h1>
 						<ReservationStepper activeStep={props.activeStep} />
@@ -50,8 +50,10 @@ const GuestDetails = (props) => {
 
 					<Policies />
 				</Grid>
-				<Grid item xs={12} sm={4}>
-					<Summary />
+				<Grid item sm={12} md={4}>
+					<div style={{ marginRight: '-50px' }}>
+						<Summary />
+					</div>
 				</Grid>
 			</Grid>
 		</div>

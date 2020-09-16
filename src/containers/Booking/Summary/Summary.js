@@ -12,11 +12,6 @@ const useStyles = makeStyles({
 		padding: '20px',
 		fontFamily: 'QuickSand',
 	},
-	'@media (max-width:600px)': {
-		summaryContainer: {
-			marginRight: '0',
-		},
-	},
 	summaryTab: {
 		display: 'flex',
 		justifyContent: 'space-between',
