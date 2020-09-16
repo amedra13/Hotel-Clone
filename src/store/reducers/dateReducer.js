@@ -33,9 +33,10 @@ const beginDate = (state, newDate) => {
 	return { ...state, beginDate: newDate };
 };
 const endDate = (state, newDate) => {
-	let firstDay = state.beginDate.getDate();
-	let lastDay = newDate.getDate();
-	return { ...state, endDate: newDate, nights: lastDay - firstDay };
+	let Difference_In_Time = newDate.getTime() - state.beginDate.getTime();
+	let Difference_In_Days = Math.ceil(Difference_In_Time / (1000 * 3600 * 24));
+
+	return { ...state, endDate: newDate, nights: Difference_In_Days };
 };
 
 const dateReducer = (state = initialState, action) => {

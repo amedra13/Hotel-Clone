@@ -45,6 +45,7 @@ const DatePicker = (props) => {
 	const handleClose = () => {
 		setAnchorEl(null);
 	};
+
 	return (
 		<div className="Date">
 			<MuiPickersUtilsProvider utils={DateFnsUtils}>

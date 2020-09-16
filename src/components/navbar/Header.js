@@ -173,6 +173,7 @@ const Header = () => {
 							variant="contained"
 							component={Link}
 							to="/book"
+							onClick={scrollToTop}
 						>
 							Book
 						</Button>

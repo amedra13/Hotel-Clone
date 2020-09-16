@@ -10,6 +10,7 @@ const useStyles = makeStyles({
 		borderRadius: '5px',
 		marginRight: '50px',
 		padding: '20px',
+		fontFamily: 'QuickSand',
 	},
 	summaryTab: {
 		display: 'flex',
@@ -26,6 +27,9 @@ const useStyles = makeStyles({
 
 const Summary = (props) => {
 	const classes = useStyles();
+	const scrollToTop = () => {
+		window.scrollTo({ top: 0, behavior: 'auto' });
+	};
 
 	return (
 		<>
@@ -85,6 +89,7 @@ const Summary = (props) => {
 						component={Link}
 						to="/guestdetails"
 						fullWidth
+						onClick={scrollToTop}
 					>
 						Continue
 					</Button>
