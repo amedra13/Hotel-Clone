@@ -15,7 +15,7 @@ const BookReservation = () => {
 	return (
 		<div className="Book">
 			<BookingHeader />
-			<Grid container spacing={2}>
+			<Grid container spacing={1}>
 				<Grid item sm={12} md={8}>
 					<DatePicker />
 					{RoomDetails.map((room) => {

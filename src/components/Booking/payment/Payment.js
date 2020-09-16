@@ -8,6 +8,11 @@ const useStyles = makeStyles({
 	inputRoot: {
 		width: '75%',
 	},
+	'@media (max-width:960px)': {
+		inputRoot: {
+			width: '100%',
+		},
+	},
 	input: {
 		margin: '10px  5px',
 	},
