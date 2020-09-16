@@ -6,6 +6,7 @@ const initialState = {
 	nightlyRate: [],
 	activeStep: 0,
 	roomSummary: true,
+	reDirect: true,
 };
 
 const bookNow = (state, action) => {
@@ -15,6 +16,7 @@ const bookNow = (state, action) => {
 		rate: action.price,
 		activeStep: 1,
 		roomSummary: false,
+		reDirect: false,
 	};
 };
 
@@ -25,6 +27,7 @@ const remove = (state) => {
 		rate: null,
 		activeStep: 0,
 		roomSummary: true,
+		reDirect: true,
 	};
 };
 

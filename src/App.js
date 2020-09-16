@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import './App.css';
 import MainPage from './containers/MainPage';
 import Header from './components/navbar/Header';
@@ -12,7 +14,7 @@ import BookReservation from './containers/Booking/BookReservation';
 import GuestDetails from './containers/Booking/GuestDetails/GuestDetails';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-function App() {
+function App(props) {
 	return (
 		<BrowserRouter>
 			<div className="App">
@@ -40,7 +42,7 @@ function App() {
 						<BookReservation />
 					</Route>
 					<Route exact path="/guestdetails">
-						<GuestDetails />
+						{props.redirect ? <Redirect to="/book" /> : <GuestDetails />}
 					</Route>
 				</Switch>
 				<Footer />
@@ -49,4 +51,10 @@ function App() {
 	);
 }
 
-export default App;
+const mapStateToProps = (state) => {
+	return {
+		redirect: state.room.reDirect,
+	};
+};
+
+export default connect(mapStateToProps)(App);
