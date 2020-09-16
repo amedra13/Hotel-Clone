@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import * as actions from '../../../store/actions/index';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
@@ -79,7 +80,12 @@ const Summary = (props) => {
 						<h3>Total: </h3>
 						<h3>${(props.roomRate * 1.157 * props.nights).toFixed(2)}</h3>
 					</div>
-					<Button variant="outlined" fullWidth>
+					<Button
+						variant="outlined"
+						component={Link}
+						to="/guestdetails"
+						fullWidth
+					>
 						Continue
 					</Button>
 				</div>
