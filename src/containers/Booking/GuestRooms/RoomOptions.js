@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import * as actions from '../../../store/actions/index';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -8,6 +9,7 @@ import CreditCardIcon from '@material-ui/icons/CreditCard';
 import WifiIcon from '@material-ui/icons/Wifi';
 import AcUnitIcon from '@material-ui/icons/AcUnit';
 import SmokeFreeIcon from '@material-ui/icons/SmokeFree';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import './roomOptions.css';
 
@@ -53,12 +55,36 @@ const useStyles = makeStyles({
 });
 
 function RoomOptions(props) {
+	const match = useMediaQuery('(max-width:960px)');
 	const classes = useStyles();
 
 	const scrollAndBook = (title, price) => {
 		window.scrollTo({ top: 400, behavior: 'smooth' });
 		props.onBookNow(title, price);
 	};
+
+	let button = (
+		<Button
+			variant="outlined"
+			fullWidth
+			onClick={() => scrollAndBook(props.title, props.price)}
+		>
+			BOOK NOW
+		</Button>
+	);
+	if (match) {
+		button = (
+			<Button
+				variant="outlined"
+				fullWidth
+				component={Link}
+				to="./guestDetails"
+				onClick={() => scrollAndBook(props.title, props.price)}
+			>
+				BOOK NOW
+			</Button>
+		);
+	}
 
 	return (
 		<div className={classes.root}>
@@ -112,13 +138,7 @@ function RoomOptions(props) {
 								<p>{`$${props.price}`}</p>
 								<p>Per Night</p>
 								<p>excluding taxes & fees</p>
-								<Button
-									variant="outlined"
-									fullWidth
-									onClick={() => scrollAndBook(props.title, props.price)}
-								>
-									BOOK NOW
-								</Button>
+								{button}
 							</div>
 						</div>
 					</div>
