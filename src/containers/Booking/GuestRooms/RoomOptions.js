@@ -4,6 +4,7 @@ import * as actions from '../../../store/actions/index';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import CreditCardIcon from '@material-ui/icons/CreditCard';
 import WifiIcon from '@material-ui/icons/Wifi';
 import AcUnitIcon from '@material-ui/icons/AcUnit';
 import SmokeFreeIcon from '@material-ui/icons/SmokeFree';
@@ -45,10 +46,19 @@ const useStyles = makeStyles({
 		objectFit: 'contain',
 		transform: 'translateY(-20%)',
 	},
+	borderBot: {
+		width: '90%',
+		borderBottom: '1px solid rgba(0,0,0,.3)',
+	},
 });
 
 function RoomOptions(props) {
 	const classes = useStyles();
+
+	const scrollAndBook = (title, price) => {
+		window.scrollTo({ top: 400, behavior: 'smooth' });
+		props.onBookNow(title, price);
+	};
 
 	return (
 		<div className={classes.root}>
@@ -78,7 +88,7 @@ function RoomOptions(props) {
 				</Grid>
 				<Grid item sm={12} md={8}>
 					<div>
-						<div className={classes.roomType}>
+						<div className={`${classes.roomType} ${classes.borderBot}`}>
 							<h2>{props.title}</h2>
 							<p>{props.dimensions.join(' | ')}</p>
 							<p>{props.description}</p>
@@ -89,7 +99,10 @@ function RoomOptions(props) {
 								<p>
 									<i>Free Cancellation</i>
 								</p>
-								<p>Guaranteed with Credit Card</p>
+								<div style={{ display: 'flex', alignItems: 'center' }}>
+									<CreditCardIcon />
+									<p>Guaranteed with Credit Card</p>
+								</div>
 								<p>
 									Most Flexible Rate. Includes access to WiFi and In-Room Dining
 									by Nobu.
@@ -102,7 +115,7 @@ function RoomOptions(props) {
 								<Button
 									variant="outlined"
 									fullWidth
-									onClick={() => props.onBookNow(props.title, props.price)}
+									onClick={() => scrollAndBook(props.title, props.price)}
 								>
 									BOOK NOW
 								</Button>

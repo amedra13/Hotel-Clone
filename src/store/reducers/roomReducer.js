@@ -3,19 +3,37 @@ import * as actions from '../actions/actions';
 const initialState = {
 	roomType: null,
 	rate: null,
-	price: 0,
+	nightlyRate: [],
+	activeStep: 0,
+	roomSummary: true,
 };
 
 const bookNow = (state, action) => {
-	let newRoom = action.title;
-	let newRate = action.price;
-	return { ...state, roomType: newRoom, rate: newRate };
+	return {
+		...state,
+		roomType: action.title,
+		rate: action.price,
+		activeStep: 1,
+		roomSummary: false,
+	};
+};
+
+const remove = (state) => {
+	return {
+		...state,
+		roomType: null,
+		rate: null,
+		activeStep: 0,
+		roomSummary: true,
+	};
 };
 
 const roomReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case actions.BOOK_NOW:
 			return bookNow(state, action);
+		case actions.REMOVE:
+			return remove(state);
 		default:
 			return state;
 	}

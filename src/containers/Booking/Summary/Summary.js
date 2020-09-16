@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import * as actions from '../../../store/actions/index';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
@@ -15,6 +16,10 @@ const useStyles = makeStyles({
 	},
 	bottomBorder: {
 		borderBottom: '1px solid rgba(0,0,0,.3)',
+		paddingBottom: '10px',
+	},
+	hidden: {
+		display: 'none',
 	},
 });
 
@@ -35,45 +40,49 @@ const Summary = (props) => {
 						<p>Before 12:00 PM</p>
 					</div>
 				</div>
-				<div className={classes.bottomBorder}>
-					<div>
-						<p>
-							<strong>
-								{props.beginDate.toDateString().replaceAll(' ', ', ')} -{' '}
-								{props.endDate.toDateString().replaceAll(' ', ', ')}
-							</strong>
-						</p>
-						<p>
-							<i>
-								{props.adults} Adults, {props.children} Children, {props.nights}{' '}
-								nights
-							</i>
-						</p>
-					</div>
-					<div className={classes.summaryTab}>
+				<div className={props.hidden && classes.hidden}>
+					<div className={classes.bottomBorder}>
 						<div>
-							<p>{props.roomSelected}</p>
 							<p>
-								<i>Free Cancellation</i>
+								<strong>
+									{props.beginDate.toDateString().replaceAll(' ', ', ')} -{' '}
+									{props.endDate.toDateString().replaceAll(' ', ', ')}
+								</strong>
+							</p>
+							<p>
+								<i>
+									{props.adults} Adults, {props.children} Children,{' '}
+									{props.nights} nights
+								</i>
 							</p>
 						</div>
-						<p>${props.roomRate}</p>
+						<div className={classes.summaryTab}>
+							<div>
+								<p>{props.roomSelected}</p>
+								<p>
+									<i>Free Cancellation</i>
+								</p>
+							</div>
+							<p>
+								${props.roomRate} x {props.nights} night(s)
+							</p>
+						</div>
+						<div className={classes.summaryTab}>
+							<p>Taxes and Fees</p>
+							<p>${(props.roomRate * 0.157 * props.nights).toFixed(2)}</p>
+						</div>
+						<Button variant="outlined" onClick={props.onRemove}>
+							Remove
+						</Button>
 					</div>
 					<div className={classes.summaryTab}>
-						<p>Taxes and Fees</p>
-						<p>${(props.roomRate * 0.157 * props.nights).toFixed(2)}</p>
+						<h3>Total: </h3>
+						<h3>${(props.roomRate * 1.157 * props.nights).toFixed(2)}</h3>
 					</div>
-					<div>
-						<p>Edit | Remove</p>
-					</div>
+					<Button variant="outlined" fullWidth>
+						Continue
+					</Button>
 				</div>
-				<div className={classes.summaryTab}>
-					<h3>Total: </h3>
-					<h3>${(props.roomRate * 1.157 * props.nights).toFixed(2)}</h3>
-				</div>
-				<Button variant="outlined" fullWidth>
-					Continue
-				</Button>
 			</div>
 		</>
 	);
@@ -88,7 +97,13 @@ const mapStateToProps = (state) => {
 		roomSelected: state.room.roomType,
 		roomRate: state.room.rate,
 		nights: state.date.nights,
+		hidden: state.room.roomSummary,
+	};
+};
+const mapDispatchToProps = (dispatch) => {
+	return {
+		onRemove: () => dispatch(actions.remove()),
 	};
 };
 
-export default connect(mapStateToProps)(Summary);
+export default connect(mapStateToProps, mapDispatchToProps)(Summary);

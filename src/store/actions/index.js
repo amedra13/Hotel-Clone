@@ -7,4 +7,4 @@ export {
 	endDateChange,
 } from './dates';
 
-export { bookNow } from './room';
+export { bookNow, remove } from './room';

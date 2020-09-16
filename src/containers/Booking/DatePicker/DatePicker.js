@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../../store/actions/index';
-import Button from '@material-ui/core/Button';
 import GroupIcon from '@material-ui/icons/Group';
 import Grid from '@material-ui/core/Grid';
 import Menu from '@material-ui/core/Menu';
@@ -37,15 +36,7 @@ const useStyles = makeStyles({
 
 const DatePicker = (props) => {
 	const [anchorEl, setAnchorEl] = useState(null);
-	const [activeStep, setActiveStep] = useState(0);
-
 	const classes = useStyles();
-
-	const displayInfo = () => {
-		console.log(props.beginDate.toDateString().replaceAll(' ', ', '));
-		console.log(props.endDate.toDateString().replaceAll(' ', ', '));
-		setActiveStep(1);
-	};
 
 	const handleClick = (event) => {
 		setAnchorEl(event.currentTarget);
@@ -63,7 +54,7 @@ const DatePicker = (props) => {
 					alignItems="center"
 					spacing={5}
 				>
-					<Grid item>
+					<Grid item xs={4}>
 						<div>
 							<div className="Date__GuestInfo" onClick={handleClick}>
 								<GroupIcon />
@@ -100,7 +91,7 @@ const DatePicker = (props) => {
 							</Menu>
 						</div>
 					</Grid>
-					<Grid item>
+					<Grid item xs={4}>
 						<KeyboardDatePicker
 							disableToolbar
 							variant="inline"
@@ -114,7 +105,7 @@ const DatePicker = (props) => {
 							onChange={props.onBeginDate}
 						/>
 					</Grid>
-					<Grid item>
+					<Grid item xs={4}>
 						<KeyboardDatePicker
 							disableToolbar
 							variant="inline"
@@ -130,17 +121,8 @@ const DatePicker = (props) => {
 							onChange={props.onEndDate}
 						/>
 					</Grid>
-					<Grid item>
-						<Button
-							className={classes.Date__Button}
-							onClick={displayInfo}
-							variant="outlined"
-						>
-							Continue
-						</Button>
-					</Grid>
 				</Grid>
-				<Stepper className={classes.Stepper} activeStep={activeStep}>
+				<Stepper className={classes.Stepper} activeStep={props.activeStep}>
 					<Step>
 						<StepLabel>Rooms</StepLabel>
 					</Step>
@@ -165,6 +147,7 @@ const mapStateToProps = (state) => {
 		children: state.date.children,
 		beginDate: state.date.beginDate,
 		endDate: state.date.endDate,
+		activeStep: state.room.activeStep,
 	};
 };
 const mapDispatchToProps = (dispatch) => {

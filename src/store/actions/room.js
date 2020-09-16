@@ -7,3 +7,9 @@ export const bookNow = (title, price) => {
 		price: price,
 	};
 };
+
+export const remove = () => {
+	return {
+		type: actionTypes.REMOVE,
+	};
+};
