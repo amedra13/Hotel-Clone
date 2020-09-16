@@ -1,0 +1,15 @@
+.Policies__root {
+	border: 1px solid rgba(0, 0, 0, 0.274);
+	padding: 20px;
+	margin-top: 20px;
+}
+.Policies__checkIn {
+	display: flex;
+}
+.Policies__tab {
+	margin: 15px 15px 15px 0;
+	font-size: small;
+}
+.Policies__tab > p {
+	margin: 0;
+}

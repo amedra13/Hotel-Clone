@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import ReservationStepper from '../../../components/Booking/customStepper/ReservationStepper';
 import * as actions from '../../../store/actions/index';
 import GroupIcon from '@material-ui/icons/Group';
 import Grid from '@material-ui/core/Grid';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import Stepper from '@material-ui/core/Stepper';
-import Step from '@material-ui/core/Step';
-import StepLabel from '@material-ui/core/StepLabel';
 import DateFnsUtils from '@date-io/date-fns';
 import {
 	MuiPickersUtilsProvider,
@@ -123,20 +121,7 @@ const DatePicker = (props) => {
 						/>
 					</Grid>
 				</Grid>
-				<Stepper className={classes.Stepper} activeStep={props.activeStep}>
-					<Step>
-						<StepLabel>Rooms</StepLabel>
-					</Step>
-					<Step>
-						<StepLabel>Guest Details</StepLabel>
-					</Step>
-					<Step>
-						<StepLabel>Review</StepLabel>
-					</Step>
-					<Step>
-						<StepLabel>Confirmation</StepLabel>
-					</Step>
-				</Stepper>
+				<ReservationStepper activeStep={props.activeStep} />
 			</MuiPickersUtilsProvider>
 		</div>
 	);
