@@ -34,6 +34,10 @@ const Header = () => {
 	const matches = useMediaQuery('(min-width:850px)');
 	const classes = useStyles();
 
+	const scrollToTop = () => {
+		window.scrollTo({ top: 0, behavior: 'auto' });
+	};
+
 	const tabs = (
 		<>
 			<Typography
@@ -41,6 +45,7 @@ const Header = () => {
 				variant="button"
 				component={Link}
 				to="/rooms"
+				onClick={scrollToTop}
 			>
 				ROOMS & SUITES
 			</Typography>
@@ -49,6 +54,7 @@ const Header = () => {
 				variant="button"
 				component={Link}
 				to="/offers"
+				onClick={scrollToTop}
 			>
 				OFFERS
 			</Typography>
@@ -57,6 +63,7 @@ const Header = () => {
 				variant="button"
 				component={Link}
 				to="/dining"
+				onClick={scrollToTop}
 			>
 				DINING
 			</Typography>
@@ -65,6 +72,7 @@ const Header = () => {
 				variant="button"
 				component={Link}
 				to="/events"
+				onClick={scrollToTop}
 			>
 				MEETINGS & EVENTS
 			</Typography>
@@ -73,6 +81,7 @@ const Header = () => {
 				variant="button"
 				component={Link}
 				to="/covid"
+				onClick={scrollToTop}
 			>
 				COVID-UPDATES
 			</Typography>
@@ -154,7 +163,7 @@ const Header = () => {
 		<>
 			<AppBar style={{ background: ' rgba(252, 252, 252, 0.589)' }}>
 				<Toolbar className="Header">
-					<Button component={Link} to="/">
+					<Button component={Link} to="/" onClick={scrollToTop}>
 						<img className="Header__Logo" src={logo} alt="nobu logo" />
 					</Button>
 					<div className="Header__Tabs">
