@@ -30,11 +30,10 @@ const useStyles = makeStyles({
 const GuestDetails = (props) => {
 	const classes = useStyles();
 
-	let disabled =
-		props.firstName === null ||
-		props.lastName === null ||
-		props.email === null ||
-		props.phone === null;
+	const disabled =
+		props.firstName && props.lastName && props.email && props.phone
+			? false
+			: true;
 
 	return (
 		<div className={classes.guestRoot}>
@@ -58,7 +57,7 @@ const GuestDetails = (props) => {
 				</Grid>
 				<Grid item sm={12} md={4}>
 					<div style={{ marginRight: '-50px' }}>
-						<Summary nextPage="/confirmation" disbaled={disabled} />
+						<Summary nextPage="/confirmation" disabled={disabled} />
 					</div>
 				</Grid>
 			</Grid>
