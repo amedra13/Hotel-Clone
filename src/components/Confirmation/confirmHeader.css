@@ -1,0 +1,9 @@
+.ConfirmationHeader__root {
+	height: 20vh;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	border: 1px solid rgba(0, 0, 0, 0.274);
+	border-radius: 5px;
+}

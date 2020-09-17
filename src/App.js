@@ -43,8 +43,7 @@ function App(props) {
 						<BookReservation />
 					</Route>
 					<Route exact path="/guestdetails">
-						<GuestDetails />
-						{/* {props.redirect ? <Redirect to="/book" /> : <GuestDetails />} */}
+						{props.redirect ? <Redirect to="/book" /> : <GuestDetails />}
 					</Route>
 					<Route exact path="/confirmation">
 						<Confirmation />

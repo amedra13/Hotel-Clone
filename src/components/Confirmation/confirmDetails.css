@@ -1,0 +1,18 @@
+.confirm__gridItem {
+	background-color: rgb(241, 241, 241);
+	border-radius: 5px;
+	padding: 20px;
+	height: 100%;
+}
+
+.confirm__gridTab {
+	display: flex;
+	padding-left: 10px;
+	border-radius: 5px;
+}
+.confirm__gridTab > * {
+	width: 50%;
+}
+.confirm__gridTab:nth-child(2n) {
+	background-color: rgb(255, 255, 255);
+}

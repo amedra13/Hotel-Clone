@@ -3,7 +3,6 @@ import * as actions from '../actions/actions';
 const initialState = {
 	roomType: null,
 	rate: null,
-	nightlyRate: [],
 	activeStep: 0,
 	roomSummary: true,
 	reDirect: true,

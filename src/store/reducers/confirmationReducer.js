@@ -1,11 +1,11 @@
 import * as actions from '../actions/actions';
 
 const initialState = {
-	firstName: '',
-	lastName: '',
-	phoneNumber: '',
-	email: '',
-	additionalDetails: '',
+	firstName: null,
+	lastName: null,
+	phoneNumber: null,
+	email: null,
+	additionalDetails: null,
 };
 
 const roomReducer = (state = initialState, action) => {

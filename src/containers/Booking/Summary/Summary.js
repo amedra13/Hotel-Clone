@@ -89,6 +89,7 @@ const Summary = (props) => {
 						variant="outlined"
 						component={Link}
 						to={props.nextPage}
+						disabled={props.disabled}
 						fullWidth
 						onClick={scrollAndStep}
 					>
