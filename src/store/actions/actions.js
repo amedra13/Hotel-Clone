@@ -16,3 +16,5 @@ export const ADD_LASTNAME = 'ADD_LASTNAME';
 export const ADD_EMAIL = 'ADD_EMAIL';
 export const ADD_PHONENUMBER = 'ADD_PHONENUMBER';
 export const ADD_DETAILS = 'ADD_DETAILS';
+
+export const NEXT_STEP = 'NEXT_STEP';

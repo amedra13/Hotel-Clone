@@ -23,9 +23,6 @@ const ReservationStepper = (props) => {
 					<StepLabel>Guest Details</StepLabel>
 				</Step>
 				<Step>
-					<StepLabel>Review</StepLabel>
-				</Step>
-				<Step>
 					<StepLabel>Confirmation</StepLabel>
 				</Step>
 			</Stepper>

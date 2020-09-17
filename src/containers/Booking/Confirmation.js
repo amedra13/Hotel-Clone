@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const Confirmation = () => {
-	return <div></div>;
+	return <div>Confirmation</div>;
 };
 const mapStateToProps = (state) => {
 	return {

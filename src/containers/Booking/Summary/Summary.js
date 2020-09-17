@@ -27,8 +27,9 @@ const useStyles = makeStyles({
 
 const Summary = (props) => {
 	const classes = useStyles();
-	const scrollToTop = () => {
+	const scrollAndStep = () => {
 		window.scrollTo({ top: 0, behavior: 'auto' });
+		props.onNextStep();
 	};
 
 	return (
@@ -89,7 +90,7 @@ const Summary = (props) => {
 						component={Link}
 						to="/guestdetails"
 						fullWidth
-						onClick={scrollToTop}
+						onClick={scrollAndStep}
 					>
 						Continue
 					</Button>
@@ -114,6 +115,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		onRemove: () => dispatch(actions.remove()),
+		onNextStep: () => dispatch(actions.nextStep()),
 	};
 };
 

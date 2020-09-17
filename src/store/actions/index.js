@@ -7,7 +7,7 @@ export {
 	endDateChange,
 } from './dates';
 
-export { bookNow, remove } from './room';
+export { bookNow, remove, nextStep } from './room';
 
 export {
 	addFirstName,

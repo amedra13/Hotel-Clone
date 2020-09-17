@@ -13,3 +13,9 @@ export const remove = () => {
 		type: actionTypes.REMOVE,
 	};
 };
+
+export const nextStep = () => {
+	return {
+		type: actionTypes.NEXT_STEP,
+	};
+};

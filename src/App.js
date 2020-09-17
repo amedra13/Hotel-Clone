@@ -12,6 +12,7 @@ import MeetingsAndEvents from './containers/MeetingsAndEvents';
 import CovidUpdates from './containers/CovidUpdates';
 import BookReservation from './containers/Booking/BookReservation';
 import GuestDetails from './containers/Booking/GuestDetails/GuestDetails';
+import Confirmation from './containers/Booking/Confirmation';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 function App(props) {
@@ -44,6 +45,9 @@ function App(props) {
 					<Route exact path="/guestdetails">
 						<GuestDetails />
 						{/* {props.redirect ? <Redirect to="/book" /> : <GuestDetails />} */}
+					</Route>
+					<Route exact path="/confirmation">
+						<Confirmation />
 					</Route>
 				</Switch>
 				<Footer />

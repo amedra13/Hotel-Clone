@@ -14,7 +14,6 @@ const bookNow = (state, action) => {
 		...state,
 		roomType: action.title,
 		rate: action.price,
-		activeStep: 1,
 		roomSummary: false,
 		reDirect: false,
 	};
@@ -31,12 +30,22 @@ const remove = (state) => {
 	};
 };
 
+const nextStep = (state) => {
+	const nextLevel = state.activeStep + 1;
+	return {
+		...state,
+		activeStep: nextLevel,
+	};
+};
+
 const roomReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case actions.BOOK_NOW:
 			return bookNow(state, action);
 		case actions.REMOVE:
 			return remove(state);
+		case actions.NEXT_STEP:
+			return nextStep(state);
 		default:
 			return state;
 	}
