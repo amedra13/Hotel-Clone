@@ -32,7 +32,7 @@ const BookReservation = () => {
 					})}
 				</Grid>
 				<Grid item md={4}>
-					{!match && <Summary />}
+					{!match && <Summary nextPage="/guestDetails" />}
 				</Grid>
 			</Grid>
 		</div>

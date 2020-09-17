@@ -52,7 +52,7 @@ const GuestDetails = (props) => {
 				</Grid>
 				<Grid item sm={12} md={4}>
 					<div style={{ marginRight: '-50px' }}>
-						<Summary />
+						<Summary nextPage="/confirmation" />
 					</div>
 				</Grid>
 			</Grid>

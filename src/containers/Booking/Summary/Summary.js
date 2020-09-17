@@ -88,7 +88,7 @@ const Summary = (props) => {
 					<Button
 						variant="outlined"
 						component={Link}
-						to="/guestdetails"
+						to={props.nextPage}
 						fullWidth
 						onClick={scrollAndStep}
 					>
