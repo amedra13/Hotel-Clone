@@ -10,3 +10,9 @@ export const ENDDATE_CHANGE = 'ENDDATE_CHANGE';
 export const BOOK_NOW = 'BOOK_NOW';
 
 export const REMOVE = 'REMOVE';
+
+export const ADD_FIRSTNAME = 'ADD_FIRSTNAME';
+export const ADD_LASTNAME = 'ADD_LASTNAME';
+export const ADD_EMAIL = 'ADD_EMAIL';
+export const ADD_PHONENUMBER = 'ADD_PHONENUMBER';
+export const ADD_DETAILS = 'ADD_DETAILS';

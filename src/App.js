@@ -42,7 +42,8 @@ function App(props) {
 						<BookReservation />
 					</Route>
 					<Route exact path="/guestdetails">
-						{props.redirect ? <Redirect to="/book" /> : <GuestDetails />}
+						<GuestDetails />
+						{/* {props.redirect ? <Redirect to="/book" /> : <GuestDetails />} */}
 					</Route>
 				</Switch>
 				<Footer />

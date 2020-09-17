@@ -8,3 +8,11 @@ export {
 } from './dates';
 
 export { bookNow, remove } from './room';
+
+export {
+	addFirstName,
+	addLastName,
+	addEmail,
+	addPhoneNumber,
+	addDetails,
+} from './confirmation';
