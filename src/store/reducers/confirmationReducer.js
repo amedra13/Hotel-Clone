@@ -1,11 +1,11 @@
 import * as actions from '../actions/actions';
 
 const initialState = {
-	firstName: 'andres',
-	lastName: 'Medrano',
+	firstName: '',
+	lastName: '',
 	phoneNumber: '',
 	email: '',
-	additionDetails: '',
+	additionalDetails: '',
 };
 
 const roomReducer = (state = initialState, action) => {
@@ -33,7 +33,7 @@ const roomReducer = (state = initialState, action) => {
 		case actions.ADD_DETAILS:
 			return {
 				...state,
-				additionDetails: action.additionDetails,
+				additionalDetails: action.additionalDetails,
 			};
 		default:
 			return state;
