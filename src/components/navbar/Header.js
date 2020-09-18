@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../store/actions/index';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
@@ -29,13 +31,14 @@ const useStyles = makeStyles({
 	},
 });
 
-const Header = () => {
+const Header = (props) => {
 	const [toggleTab, setToggleTab] = useState(false);
 	const matches = useMediaQuery('(min-width:850px)');
 	const classes = useStyles();
 
-	const scrollToTop = () => {
+	const scrollAndClear = () => {
 		window.scrollTo({ top: 0, behavior: 'auto' });
+		props.onRemove();
 	};
 
 	const tabs = (
@@ -45,7 +48,7 @@ const Header = () => {
 				variant="button"
 				component={Link}
 				to="/rooms"
-				onClick={scrollToTop}
+				onClick={scrollAndClear}
 			>
 				ROOMS & SUITES
 			</Typography>
@@ -54,7 +57,7 @@ const Header = () => {
 				variant="button"
 				component={Link}
 				to="/offers"
-				onClick={scrollToTop}
+				onClick={scrollAndClear}
 			>
 				OFFERS
 			</Typography>
@@ -63,7 +66,7 @@ const Header = () => {
 				variant="button"
 				component={Link}
 				to="/dining"
-				onClick={scrollToTop}
+				onClick={scrollAndClear}
 			>
 				DINING
 			</Typography>
@@ -72,7 +75,7 @@ const Header = () => {
 				variant="button"
 				component={Link}
 				to="/events"
-				onClick={scrollToTop}
+				onClick={scrollAndClear}
 			>
 				MEETINGS & EVENTS
 			</Typography>
@@ -81,7 +84,7 @@ const Header = () => {
 				variant="button"
 				component={Link}
 				to="/covid"
-				onClick={scrollToTop}
+				onClick={scrollAndClear}
 			>
 				COVID-UPDATES
 			</Typography>
@@ -163,7 +166,7 @@ const Header = () => {
 		<>
 			<AppBar style={{ background: ' rgba(252, 252, 252, 0.589)' }}>
 				<Toolbar className="Header">
-					<Button component={Link} to="/" onClick={scrollToTop}>
+					<Button component={Link} to="/" onClick={scrollAndClear}>
 						<img className="Header__Logo" src={logo} alt="nobu logo" />
 					</Button>
 					<div className="Header__Tabs">
@@ -173,7 +176,7 @@ const Header = () => {
 							variant="contained"
 							component={Link}
 							to="/book"
-							onClick={scrollToTop}
+							onClick={scrollAndClear}
 						>
 							Book
 						</Button>
@@ -185,5 +188,10 @@ const Header = () => {
 		</>
 	);
 };
+const mapDispatchToProps = (dispatch) => {
+	return {
+		onRemove: () => dispatch(actions.remove()),
+	};
+};
 
-export default Header;
+export default connect(null, mapDispatchToProps)(Header);

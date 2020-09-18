@@ -27,7 +27,14 @@ const Confirmation = (props) => {
 				roomType={props.roomType}
 				nightlyRate={props.nightlyRate}
 			/>
-			<Button component={Link} to="/book" onClick={scrollAndRestart} fullWidth>
+			<Button
+				variant="outlined"
+				component={Link}
+				to="/book"
+				style={{ marginBottom: '20px' }}
+				onClick={scrollAndRestart}
+				fullWidth
+			>
 				<p>
 					<strong>
 						<i>New Reservation</i>
