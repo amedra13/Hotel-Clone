@@ -9,5 +9,5 @@
 	height: auto;
 	width: 100%;
 	object-fit: cover;
-	object-position: 50% 0%;
+	transform: translateY(-17%);
 }
