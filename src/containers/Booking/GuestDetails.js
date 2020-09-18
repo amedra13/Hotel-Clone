@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Summary from './Summary/Summary';
+import Summary from '../../components/Booking/Summary/Summary';
 import Policies from '../../components/Booking/policies/Policies';
 import Payment from '../../components/Booking/payment/Payment';
 import AdditionalInfo from '../../components/Booking/additionalInfo/AdditionalInfo';

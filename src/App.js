@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import './App.css';
 import MainPage from './containers/MainPage';
-import Header from './components/navbar/Header';
+import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import Rooms from './containers/Rooms';
 import Dining from './containers/Dining';
@@ -19,7 +19,7 @@ function App(props) {
 	return (
 		<BrowserRouter>
 			<div className="App">
-				<Header />
+				<NavBar />
 				<Switch>
 					<Route exact path="/">
 						<MainPage />

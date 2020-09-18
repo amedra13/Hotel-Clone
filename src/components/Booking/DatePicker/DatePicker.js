@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ReservationStepper from '../../../components/Booking/customStepper/ReservationStepper';
-import Occupancy from '../../../components/Booking/occupancy/Occupancy';
+import ReservationStepper from '../customStepper/ReservationStepper';
+import Occupancy from '../occupancy/Occupancy';
 import * as actions from '../../../store/actions/index';
 import Grid from '@material-ui/core/Grid';
 import DateFnsUtils from '@date-io/date-fns';
