@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-material-ui-carousel';
-import balcony from '../images/MainPage/nobu_balcony.jpg';
-import interior from '../images/MainPage/nobu_roomInt.jpg';
+import balcony from '../../images/MainPage/nobu_balcony.jpg';
+import interior from '../../images/MainPage/nobu_roomInt.jpg';
 import './roomsCarousel.css';
 
 const RoomsCarousel = (props) => {

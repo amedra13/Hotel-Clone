@@ -11,7 +11,7 @@ import Offers from './containers/Offers';
 import MeetingsAndEvents from './containers/MeetingsAndEvents';
 import CovidUpdates from './containers/CovidUpdates';
 import BookReservation from './containers/Booking/BookReservation';
-import GuestDetails from './containers/Booking/GuestDetails/GuestDetails';
+import GuestDetails from './containers/Booking/GuestDetails';
 import Confirmation from './containers/Booking/Confirmation';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 

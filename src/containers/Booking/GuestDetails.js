@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Summary from '../Summary/Summary';
-import Policies from '../../../components/Booking/policies/Policies';
-import Payment from '../../../components/Booking/payment/Payment';
-import AdditionalInfo from '../../../components/Booking/additionalInfo/AdditionalInfo';
-import ContactInfo from '../../../components/Booking/contactInfo/ContactInfo';
-import ReservationStepper from '../../../components/Booking/customStepper/ReservationStepper';
+import Summary from './Summary/Summary';
+import Policies from '../../components/Booking/policies/Policies';
+import Payment from '../../components/Booking/payment/Payment';
+import AdditionalInfo from '../../components/Booking/additionalInfo/AdditionalInfo';
+import ContactInfo from '../../components/Booking/contactInfo/ContactInfo';
+import ReservationStepper from '../../components/Booking/customStepper/ReservationStepper';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import DatePicker from './DatePicker/DatePicker';
-import RoomOptions from './GuestRooms/RoomOptions';
+import RoomOptions from '../../components/Booking/roomOptions/RoomOptions';
 import BookingHeader from './bookHeader/BookingHeader';
 import Summary from './Summary/Summary';
 import Grid from '@material-ui/core/Grid';
