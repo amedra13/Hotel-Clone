@@ -4,7 +4,6 @@ import hotelEntrance from '../../images/MainPage/nobu_hotelEntrance.jpg';
 import insideBuilding from '../../images/MainPage/nobu_insideBuilding.jpg';
 import meetingSpace from '../../images/MainPage/nobu_MeetingSpace.jpg';
 import restuarantEntrance from '../../images/MainPage/nobu_restuarantEntrance.jpg';
-import waitingRoom from '../../images/MainPage/nobu_waitingRoom.jpg';
 import CarouselItem from './carouslItem/CarouselItem';
 
 const CarouselComponent = () => {
@@ -17,7 +16,6 @@ const CarouselComponent = () => {
 				imgSource={restuarantEntrance}
 				description="Nobu Restuarant Entrance"
 			/>
-			<CarouselItem imgSource={waitingRoom} description="Nobu Waiting Room" />
 		</Carousel>
 	);
 };
