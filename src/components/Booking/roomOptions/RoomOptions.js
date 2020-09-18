@@ -63,29 +63,6 @@ function RoomOptions(props) {
 		props.onBookNow(title, price);
 	};
 
-	let button = (
-		<Button
-			variant="outlined"
-			fullWidth
-			onClick={() => scrollAndBook(props.title, props.price)}
-		>
-			BOOK NOW
-		</Button>
-	);
-	if (match) {
-		button = (
-			<Button
-				variant="outlined"
-				fullWidth
-				component={Link}
-				to="./guestDetails"
-				onClick={() => scrollAndBook(props.title, props.price)}
-			>
-				BOOK NOW
-			</Button>
-		);
-	}
-
 	return (
 		<div className={classes.root}>
 			<Grid container spacing={1}>
@@ -138,7 +115,15 @@ function RoomOptions(props) {
 								<p>{`$${props.price}`}</p>
 								<p>Per Night</p>
 								<p>excluding taxes & fees</p>
-								{button}
+								<Button
+									variant="outlined"
+									fullWidth
+									component={match ? Link : 'button'}
+									to={match ? './guestDetails' : null}
+									onClick={() => scrollAndBook(props.title, props.price)}
+								>
+									BOOK NOW
+								</Button>
 							</div>
 						</div>
 					</div>
